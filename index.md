@@ -1,3 +1,9 @@
+---
+layout: page
+title: Newb Shader
+permalink: /newb-shader/
+---
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/devendrn/devendrn.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
