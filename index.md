@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Newb Shader
 permalink: /newb-shader/
 ---
