@@ -6,7 +6,7 @@
 	<meta name="description" content="">
 	<meta name="author"      content="VeteranDev">
 	
-	<title>Newb Shader Help</title>
+	<title>Newb Shader Customization</title>
 
 	<link rel="shortcut icon" href="../assets/images/gt_favicon.png">
 	
@@ -48,37 +48,115 @@
 
 	<!-- Intro -->
 	<div class="container text-center">
-		<br><br><h2 class="thin"><br><br>FAQs<br><br></h2>
+		<br><br><h2 class="thin"><br><br>Customization<br><br></h2>
 	</div>
 	<!-- /Intro-->
 
-	<!-- container -->
+	<div class="container jumbotron">
+		<p><b>Warning:</b> Making wrong changes to the files may cause shader to fail</p>
+		<p>Some files have parts of code after configuration section. Don't mess with the code section unless you understand what you are doing.</p>
+		<p>Make sure you are using "External Storage" in Minecraft settings.</p>
+	</div>
+
+	<div class="container thin">
+		<h3 class="thin">Main steps:</h3>
+		<ol>
+			<li>Using a file manager, navigate to this folder:<br>
+			<div class="jumbotron" style="overflow:scroll; padding-top:5px; padding-bottom:5px;">/storage/games/com.mojang/resource_packs/NewbShader/shaders/glsl/config_utilities</div>
+			All the configuration files can be found here as a .h file.</li>
+			<li>Open the required config file using a text editor and after making your changes, save the file.</li>
+			<li>Open Minecraft to see changes. You can launch Minecraft from recents/background without having to restart it completely.</li>
+		</ol>
+	</div>
+
+	<div class="container thin">
+		<h3 class="thin">Making changes:</h3>
+		<div class="jumbotron">
+			<h5>Toggle options</h5>
+			<p>Add <code>//</code> before <code>#define</code> to turn it off.</p>
+			<p><code>#define EXAMPLE</code> will enable EXAMPLE
+			<br><code>//#define EXAMPLE</code> will disable EXAMPLE</p>
+		</div><br>
+		<div class="jumbotron">
+			<h5>Value options</h5>
+			<p>Values must be in decimal format. eg: 1.7,0.1,0.0
+			<br>Don't toggle unless specified "Toggle + Value".</p>
+			<p><code>#define example 1.23</code></p>
+		</div><br>
+		<div class="jumbotron">
+			<h5>Color options</h5>
+			<p>Colors are in RGB format (range 0.0-1.0 for most options)
+			<div style="overflow:scroll;"><p><code>const vec3 example = vec3(red,green,blue);</code><p></div>
+			<p>
+				Some color examples:<br>
+				vec3(0.0,0.0,0.0) - black<br>
+				vec3(1.0,1.0,1.0) - white<br>
+				vec3(1.0,0.0,0.0) - red<br>
+				vec3(1.0,0.0,1.0) - magenta<br>
+			</p>
+		</div><br>
+		<div class="jumbotron">
+			<h5>Type options</h5>
+			<p>0,1,2,3... (choose between types using numbers)</p>
+			<p><code>// read_this<br>
+			#define EXAMPLE_TYPE 2</code></p>
+		</div>
+
+	</div><br>
+
+	<div class="container thin">
+	<h4>Config files</h4>
+	<p>A list of all config files, and their basic options</p>
 	<div class="container">
-		<div class="jumbotron">
-			<h4 class="text-center">Why is the shader invisible on my device?</h4> 
-			<p class="text-center">It's probably a Minecraft import issue. Try to install the shader using other methods.</p>
-		</div>
-		<p><br></p>
-		<div class="jumbotron">
-			<h4 class="text-center">Why is the sky box black? or Why is everything vanilla?</h4>
-			<p class="text-center">The shader doesn't support your device. It only supports Android and iOS.</p>
-		</div>
-		<p><br></p>
-		<div class="jumbotron">
-			<h4 class="text-center">Why are the leaves/plants/grass color weird on my device?</h4>
-			<p class="text-center">It's a device specific bug. Use the lite version for now. The issue only happens on the main version.</p>
-		</div> 
-		<p><br></p>
-		<div class="jumbotron">
-			<h4 class="text-center">Where can I report bugs/suggest features?</h4>
-			<p class="text-center">At the <a href="https://discord.gg/Cc4qsgHcYm">Discord server</a></p>
-		</div>
-		<p><br></p>
-		<div class="jumbotron">
-			<h4 class="text-center">How can I customize the shader?</h4>
-			<p class="text-center">See <a href="customization.html">Shader customization</a></p>
-		</div>
-	</div>	<!-- /container -->
+		<h5>terrain.h</h5>
+		<ul>
+		<li>Terrain lighting settings</li>
+		<li>Underwater lighting settings</li>
+		<li>Foliage, lantern wave settings</li>
+		<li>Water settings</li>
+		</ul>
+
+		<h5>color.h</h5>
+		<ul>
+		<li>Tonemapping</li>
+		<li>Exposure</li>
+		<li>Contrast</li>
+		<li>Saturation</li>
+		<li>Tinting</li>
+		</ul>
+
+		<h5>mist_fog.h</h5>
+		<ul>
+		<li>Mist intensity</li>
+		<li>Fog type</li>
+		</ul>
+
+		<h5>clouds.h</h5>
+		<ul>
+		<li>Cloud settings</li>
+		<li>Aurora</li>
+		</ul>
+
+		<h5>global.h</h5>
+		<ul>
+		<li>Light intensity</li>
+		<li>Animation time</li>
+		</ul>
+
+		<h5>sky.h</h5>
+		<ul>
+		<li>Sky colors</li>
+		<li>Underwater fog color</li>
+		</ul>
+
+		<h5>extra.h</h5>
+		<ul>
+		<li>Sun/moon rotation</li>
+		<li>Glow textures</li>
+		<li>GUI touch circle</li>
+		</ul>
+	</div>
+</div>
 
 
 	<footer id="footer" class="top-space">
