@@ -37,7 +37,7 @@ code { font-family: monospace; background-color: #ddd; color: #00a; border-radiu
 
 /* header navigation bar */
 .navbar { background-color: #fff; box-shadow: 0 0 4px #0004; position: fixed; width: 100%; z-index: 1; }
-.navbar a { color: #111; text-align: center; padding: 10px; text-decoration: none; line-height: 20px; }
+.navbar a { color: #111; text-align: center; padding: 10px; text-decoration: none; line-height: 20px; transition: 200ms; }
 .navbar a:hover { color: #666; }
 .navbar-home { float: left; font-size: 20px; font-weight: 500; letter-spacing: -1px; }
 .navbar-element { float: right; font-size: 17px; }
@@ -63,21 +63,23 @@ code { font-family: monospace; background-color: #ddd; color: #00a; border-radiu
 /* rounded cards */
 .card { border-radius: 15px; background-color: #f1f1f1; padding: 15px 30px; margin: 10px; overflow: hidden; position: relative; }
 .card-short { height: 220px; }
-.card-img { cursor: pointer; background-size: cover;}
+.card-img { cursor: pointer; background-size: cover; box-shadow: 0 2px 4px #0003; color: #eee; transition: 200ms; }
 .card-img h3 { padding-top: 140px; margin: 0;}
-.card-img p { color: #bbb; margin: 5px 0; }
+.card-img p { color: #bbb0; margin: 5px 0; }
+.card-img:hover { margin: 5px; padding: 10px 35px 30px 35px; }
+.card-img:hover p { color: #bbbf;}
+.card-img:active { margin: 10px; padding: 5px 30px 25px 30px; }
 
 /* explore cards bg */
-.artwork-bg { background-image: linear-gradient(to top, #000f, #0000),url('../images/artworks_bg.jpg'); color: #eee; }
-.projects-bg { background-image: linear-gradient(to top, #600f, #0000),url('../images/projects_bg.jpg'); color: #eee; }
-.resume-bg { background-image: linear-gradient(to top, #228f, #0000),url('../images/resume_bg.jpg'); color: #eee; }
-.artwork-bg:hover { box-shadow:inset 0 0 40px 2px #aaa; }
-.projects-bg:hover { box-shadow:inset 0 0 40px 2px #f20; }
-.resume-bg:hover { box-shadow:inset 0 0 40px 2px #aaf; }
+.artwork-bg { background-image: linear-gradient(to top, #000a, #0000),url('../images/artworks_bg.jpg'); }
+.projects-bg { background-image: linear-gradient(to top, #600f, #0000),url('../images/projects_bg.jpg'); }
+.resume-bg { background-image: linear-gradient(to top, #228f, #0000),url('../images/resume_bg.jpg'); }
+.newb-bg {  background-image: url('../images/newb_bg.jpg'); }
 
 /* buttons */
 .btn {
 	background-color: #fff;
+	color: #222;
 	display: inline-block;
 	text-align: center;
 	padding: 6px;
@@ -85,14 +87,13 @@ code { font-family: monospace; background-color: #ddd; color: #00a; border-radiu
 	font-size: 18px;
 	box-shadow: 0 2px 4px #0001;
 	text-decoration: none;
-	color: #222;
+	transition: 200ms;
 }
-.btn-wide {
-	padding: 20px 10px;
-	width: 250px;
-	margin: 20px 0;
-}
-.btn-green { background-color: #7d9; }
+.btn-wide { padding: 20px 10px; width: 250px; margin: 20px 0; }
+.btn-wide:hover { padding: 23px 13px; margin: 17px 0; }
+.btn-wide:active { padding: 20px 10px; margin: 20px 0; }
+
+.btn-green { background-color: #7d9;}
 .btn-blue { background-color: #abd; }
 .btn-orange { background-color: #dca; }
 .btn-green:hover { background-color: #7f9; }
@@ -100,11 +101,11 @@ code { font-family: monospace; background-color: #ddd; color: #00a; border-radiu
 .btn-orange:hover { background-color: #fca; }
 
 /* profile social links/buttons */
-.social { margin: 10px -5px; position: absolute; bottom: 15px;}
-.social a { color:#222; }
-.social a:hover { color:#777; }
+.social { margin: 10px -5px; position: absolute; bottom: 15px; }
 .social .btn { padding: 6px 0; margin: 4px; width: 40px; height: 25px; }
-
+.social a { color:#222; }
+.social a:hover { color:#777; padding: 8px 0; margin: 2px 4px;}
+.social a:active { padding: 6px 0; margin: 4px;}
 
 /* gallery */
 .gallery-slide {
@@ -124,4 +125,3 @@ code { font-family: monospace; background-color: #ddd; color: #00a; border-radiu
 	max-width: 720px;
 	display: inline;
 }
-
