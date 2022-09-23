@@ -1,176 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Newb Shader for Minecraft PE">
-	<meta name="author"      content="VeteranDev">
-	<meta name="google-site-verification" content="vbCw6znnSVXS0i1nOPFdBAhUDPxquYpKdmSxqdfqhL8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Newb Shader">
+	<meta name="author" content="devendrn">
+	<meta name="google-site-verification" content="vbCw6znnSVXS0i1nOPFdBAhUDPxquYpKdmSxqdfqhL8">
 
-	<title>Newb Shader for MCPE</title>
+	<title>Newb Shader</title>
 
-	<link rel="shortcut icon" href="../assets/images/gt_favicon.png">
-	
-	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
-
-	<!-- Custom styles for our template -->
-	<link rel="stylesheet" href="../assets/css/bootstrap-theme.css" media="screen" >
 	<link rel="stylesheet" href="../assets/css/main.css">
 
-	<link rel="stylesheet" href="../assets/css/flickity.css" media="screen">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="../assets/js/html5shiv.js"></script>
-	<script src="../assets/js/respond.min.js"></script>
-	<![endif]-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 
-<body class="home">
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.html"><img src="../assets/images/logo.png" height=40px></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="downloads.html">Downloads</a></li>
-					<li><a href="help.html">Help</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div> 
-	<!-- /.navbar -->
+<body>
 
-	<!-- Header -->
-	<header id="head">
-		<div class="container">
-			<div class="row">
-				<h1 class="lead">Newb Shader 1.1.9</h1>
-				<p class="tagline">An aesthetic lightweight shader for Minecraft PE</p>
-				<p><a class="btn btn-action btn-lg" role="button" href="downloads.html">DOWNLOAD NOW</a></p>
-			</div>
-		</div>
+
+	<header class="navbar">
+		<a class="navbar-home navbar-active" href="">Newb Shader</a>
+		<a class="navbar-element" href="help.html">Help</a>
+		<a class="navbar-element" href="downloads.html">Downloads</a>
 	</header>
-	<!-- /Header -->
 
-	<!-- Intro -->
-	<div class="container text-center">
-		<br> <br>
-		<h2 class="thin">Make your gameplay more aesthetic</h2>
-		<p class="text-muted">
-			Newb Shader focuses on improving the existing vanilla shader to look more aesthetic and realistic without ruining the existing gameplay or sacrificing much performance.<br><br><br>
-		</p>
+
+	<div class="container container-section">
+		<div class="profile text-center">
+			<h1 class="profile-name">Newb Shader 1.1.9</h1>
+			<h3 class="profile-about text-thin">An aesthetic shader for Minecraft PE</h3>
+			<a class="btn btn-wide btn-green" href="downloads.html">Download <i class="fa fa-download" aria-hidden="true"></i></a>
+
+		</div>
+		<div class="container container-spaced">
+			<div class="card text-center">
+				<h4>Make your gameplay more aesthetic!</h4>
+				<p>Newb Shader focuses on improving the existing vanilla shader to look more aesthetic and realistic without ruining the existing gameplay or sacrificing much performance.</p>
+			</div>
+		</div>
 	</div>
-	<!-- /Intro-->
 
-	<!-- Screenshots - flickity -->
-	<div class="main-gallery js-flickity">
-		<img src="images/day1.jpg">
-		<img src="images/day2.jpg">
-		<img src="images/day3.jpg">
-		<img src="images/day4.jpg">
-		<img src="images/day5.jpg">
-		<img src="images/day6.jpg">
-		<img src="images/interior.jpg">
-		<img src="images/rain1.jpg">
-		<img src="images/sunrise1.jpg">
-		<img src="images/sunrise2.jpg">
-		<img src="images/night1.jpg">
-		<img src="images/night2.jpg">
-		<img src="images/night3.jpg">
-		<img src="images/cave1.jpg">
-		<img src="images/cave2.jpg">
-		<img src="images/water.jpg">
-		<img src="images/underwater1.jpg">
-		<img src="images/underwater2.jpg">
-		<img src="images/nether1.jpg">
-		<img src="images/nether2.jpg">
-		<img src="images/nether3.jpg">
-		<img src="images/end.jpg">
-	</div>
-	<!-- /Screenshots -->
+	<div class="container container-section container-fill">
 
-	<!-- Highlights - jumbotron -->
-	<div class="jumbotron top-space">
-		<div class="container">
-			<h3 class="text-center thin">Features</h3>
-			<div class="row">
-				<div class="text-center">
-					<h5>Better rain, Natural lighting, 3D Moon, Auroras, Swinging Lantern, Foliage wave, Underwater effects, Glowy ores, New Sky, Better water</h5>
+		<h3 class="text-center">Screenshots</h3>
+		<div class="gallery-slide">
+			<img src="images/day1.jpg">
+			<img src="images/day2.jpg">
+			<img src="images/day3.jpg">
+			<img src="images/day4.jpg">
+			<img src="images/day5.jpg">
+			<img src="images/day6.jpg">
+			<img src="images/interior.jpg">
+			<img src="images/rain1.jpg">
+			<img src="images/sunrise1.jpg">
+			<img src="images/sunrise2.jpg">
+			<img src="images/night1.jpg">
+			<img src="images/night2.jpg">
+			<img src="images/night3.jpg">
+			<img src="images/cave1.jpg">
+			<img src="images/cave2.jpg">
+			<img src="images/water.jpg">
+			<img src="images/underwater1.jpg">
+			<img src="images/underwater2.jpg">
+			<img src="images/nether1.jpg">
+			<img src="images/nether2.jpg">
+			<img src="images/nether3.jpg">
+			<img src="images/end.jpg">
+		</div>
+
+
+
+
+
+		<div class="container container-spaced container-section">
+			<div class="card text-center">
+				<h4>Discord server</h4>
+				<p>Newb Shader has a discord server now! Join the server for feedback, bug reports and updates.</p>
+				<a class="btn btn-wide btn-blue" href="https://discord.gg/Cc4qsgHcYm"><i class="fa-brands fa-discord"></i> Join server</a>
 				</div>
-				<div class="h-body text-center">
-					<p>Most of the features are implemented in the vertex shader for better performance.</p>
-				</div>
 			</div>
 		</div>
+
 	</div>
-	<!-- /Highlights -->
 
-	<!-- container - discord invite -->
-	<div class="container">
-			<div class="jumbotron top-space">
-			<h4 class="text-center">Discord Server</h4> 
-			<p class="text-center">Newb Shader has a discord server now! Join the server for feedback, bug reports and updates.</p>
-			<p class="text-center"><a class="btn btn-primary btn-large" href="https://discord.gg/Cc4qsgHcYm">Join Server</a></p>
-		</div>
-	</div>
-	<!-- /container -->
-	<footer id="footer" class="top-space">
 
-		<div class="footer1">
-			<div class="container">
-				<div class="row">
-					
-					<div class="col-md-3 widget">
-						<h3 class="widget-title">Contact</h3>
-						<div class="widget-body">
-							<p>Discord: <span style="color: #cccccc">VeteranDev#2969</span></p>	
-						</div>
-					</div>
 
-					<div class="col-md-3 widget">
-						<h3 class="widget-title">Follow me</h3>
-						<p style="font-size:30px;">
-							<a href="https://github.com/devendrn"><i class="fa fa-github"></i></a>
-							<a href="https://www.instagram.com/veteran.dev/"><i class="fa fa-instagram"></i></a>
-						</p>
-						<p>VeteranDev is a student who is passionate about Computer graphics and Programming.</p>
-					</div>
 
-				</div> <!-- /row of widgets -->
-			</div>
-		</div>
-    
-		<div class="footer2">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 widget">
-						<div class="widget-body">
-							<p class="text-center">
-								Copyright &copy; 2021 VeteranDev</a> 
-							</p>
-						</div>
-					</div>
-				</div> <!-- /row of widgets -->
-			</div>
-		</div>
-
+	<footer class="footer">
+		<p class="text-center">Copyright &copy; 2022 devendrn</p>
 	</footer>
 
-	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<script src="../assets/js/headroom.min.js"></script>
-	<script src="../assets/js/jQuery.headroom.min.js"></script>
-	<script src="../assets/js/template.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
-
 </body>
+
 </html>
