@@ -102,10 +102,25 @@ code { font-family: monospace; background-color: #ddd; color: #00a; border-radiu
 
 /* profile social links/buttons */
 .social { margin: 10px -5px; position: absolute; bottom: 15px; }
-.social .btn { padding: 6px 0; margin: 4px; width: 40px; height: 25px; }
-.social a { color:#222; }
-.social a:hover { color:#777; padding: 8px 0; margin: 2px 4px;}
-.social a:active { padding: 6px 0; margin: 4px;}
+.btn-social { color:#222; padding: 6px 0; margin: 4px; width: 40px; height: 25px; }
+.btn-social:hover { color:#777; padding: 8px 0; margin: 2px 4px;}
+.btn-social:active { padding: 6px 0; margin: 4px;}
+.btn-social span {
+	font-size: 16px;
+	background-color: #fff;
+	color: #222;
+	box-shadow: 0 2px 8px #0002;
+	border-radius: 8px;
+	padding: 5px 10px;
+	position: absolute;
+	bottom: 100%;
+	margin-left: -53px;
+	visibility: hidden;
+	opacity: 0;
+	transition: 230ms;
+	z-index: 1;
+}
+.btn-social:hover span { bottom: 117%; visibility: visible; opacity: 1;}
 
 /* gallery */
 .gallery-slide {
