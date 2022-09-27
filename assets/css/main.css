@@ -121,7 +121,6 @@ footer p { margin: 0 auto;}
 .gallery-slide img { width: 100%; max-width: 720px;margin: 0 10px; border-radius: 12px; box-shadow: 0 3px 12px #0003; display: inline; }
 
 
-
 /*  mobile screen */
 @media screen and (max-width: 850px){
 	.gallery img { width: 50%; }
@@ -134,7 +133,6 @@ footer p { margin: 0 auto;}
 	h4 { font-size: 19px; }
 	p { font-size: 16px; }
 	.gallery img { width: 100%; height: 100%; }
-
 	.col13 { width: 100%; height: 100%; }
 	.col13, .col23 { width: 50%; }
 	.about .col23 { width: 100%; }
@@ -146,3 +144,27 @@ footer p { margin: 0 auto;}
 
 }
 
+/* dark mode */
+/* todo - change to variables  */
+@media (prefers-color-scheme: dark) {
+	body { background: #181818; color: #fff; }
+	code { background-color: #191919; color: #5e7adf; }
+	.code-block { background-color: #191919; color: #bbb;}
+	.container-fill { background-color: #282828; }
+	.container-fill .card { background-color: #343434; }
+	.card { background-color: #282828; }
+	.navbar { background-color: #181818; }
+	.navbar a { color: #fff; }
+	.navbar a:hover { color: #aaa; }
+	.btn { background-color: #444; color: #fff; box-shadow: 0 2px 4px #0003}
+	.animated-cog i{ color: #181818; }
+	.btn-green { background-color: #296437;}
+	.btn-blue { background-color: #294164; }
+	.btn-orange { background-color: #644829; }
+	.btn-green:hover { background-color: #239e40; }
+	.btn-blue:hover { background-color: #3d7add; }
+	.btn-orange:hover { background-color: #dd8e2e; }
+	.btn-social span { background-color: #191919; color: #eee; }
+	.projects-bg { background-image: linear-gradient(to top, #011f, #0001),url('../images/projects_bg.jpg'); }
+	.resume-bg { background-image: linear-gradient(to top, #000d, #0008),url('../images/resume_bg.jpg'); }
+}
