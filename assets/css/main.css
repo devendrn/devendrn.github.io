@@ -116,7 +116,7 @@ footer p { margin: 0 auto;}
 
 /* gallery */
 .gallery { overflow: hidden; border-radius: 10px; margin: 30px 8px; }
-.gallery img {  float: left; width: 33.33%; height: 40vh; object-fit: cover; transition: 200ms; transition-delay: 200ms; }
+.gallery img { float: left; width: 33.33%; height: 40vh; object-fit: cover; transition: 200ms; transition-delay: 200ms; }
 .gallery-slide { width: 100%; padding: 20px 0; white-space: nowrap; overflow-x: scroll; }
 .gallery-slide img { width: 100%; max-width: 720px;margin: 0 10px; border-radius: 12px; box-shadow: 0 3px 12px #0003; display: inline; }
 
@@ -127,7 +127,7 @@ footer p { margin: 0 auto;}
 
 }
 @media screen and (max-width: 560px){
-	h1{ font-size: 36px; }
+	h1 { font-size: 36px; }
 	h2 { font-size: 29px; }
 	h3 { font-size: 22px; }
 	h4 { font-size: 19px; }
@@ -157,7 +157,7 @@ footer p { margin: 0 auto;}
 	.navbar a { color: #fff; }
 	.navbar a:hover { color: #aaa; }
 	.btn { background-color: #444; color: #fff; box-shadow: 0 2px 4px #0003}
-	.animated-cog i{ color: #181818; }
+	.animated-cog i { color: #181818; }
 	.btn-green { background-color: #296437;}
 	.btn-blue { background-color: #294164; }
 	.btn-orange { background-color: #644829; }
@@ -168,3 +168,19 @@ footer p { margin: 0 auto;}
 	.projects-bg { background-image: linear-gradient(to top, #011f, #0001),url('../images/projects_bg.jpg'); }
 	.resume-bg { background-image: linear-gradient(to top, #000d, #0008),url('../images/resume_bg.jpg'); }
 }
+
+/* animations - mostly for gallery */
+@keyframes gallery-in { from { margin: 50px 5% 10px 5%; } }
+@keyframes img-fade { from { opacity: 0; } }
+@keyframes gallery-spin { from { opacity: 1;} }
+@keyframes spin { from { transform: rotate(-360deg); } }
+.spinner {
+	content: "";
+	height: 36px; width: 36px;
+	border: solid 4px #888; border-top-color: #0000; border-radius: 50%;
+	animation: 1s linear infinite spin;
+}
+.gallery { animation: gallery-in; animation-delay: 1s; animation-duration: 0.7s; }
+.gallery img { animation: img-fade; animation-delay: 1s; animation-duration: 0.2s; animation-fill-mode: backwards; }
+.gallery a { opacity: 0; animation: gallery-spin; animation-delay: 1s; animation-fill-mode: backwards; }
+.gallery .spinner { margin-left: -18px; position: fixed; top: 50vh; left: 50%; }
