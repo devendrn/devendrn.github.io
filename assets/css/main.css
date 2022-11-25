@@ -124,24 +124,20 @@ footer p { margin: 0 auto;}
 /*  mobile screen */
 @media screen and (max-width: 850px){
 	.gallery img { width: 50%; }
-
 }
 @media screen and (max-width: 560px){
 	h1 { font-size: 36px; }
 	h2 { font-size: 29px; }
 	h3 { font-size: 22px; }
-	h4 { font-size: 19px; }
-	p { font-size: 16px; }
+	h4 { font-size: 18px; }
+	p { font-size: 15px; }
 	.gallery img { width: 100%; height: 100%; }
-	.col13 { width: 100%; height: 100%; }
-	.col13, .col23 { width: 50%; }
-	.about .col23 { width: 100%; }
+	.col12, .col13, .col23,.about .col23 { width: 100%; }
 	.about .col13 { display: none; }
-	.card-img { height: 170px; padding: 5px; }
+	.card-img { height: 170px; padding: 25px; margin: 5px 10px;}
+	.card-img p { color: #bbbf;}
 	.card-img h3 { padding-top: 100px; }
-	.card-img:hover { margin: 5px; padding: 5px 10px 15px 10px; }
-	.card-img:active { margin: 10px; padding:  0 5px 10px 5px; }
-
+	.card-img:active, .card-img:hover { padding: 25px; margin: 5px 10px; }
 }
 
 /* dark mode */
