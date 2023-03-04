@@ -81,6 +81,11 @@ footer p { margin: 0 auto;}
 .card-img:active h3 { top: 119px; }
 .card-img:active p { top: 159px; }
 
+/* todo - complete */
+.card-list { padding-left: 245px;}
+.card-list {text-align: left;}
+.card-list img { width: 200px; height: calc(100% - 30px); object-fit: cover; border-radius: 10px; position: absolute; left: 14px;}
+
 /* buttons */
 .btn {
 	background-color: #fff;
@@ -132,7 +137,6 @@ footer p { margin: 0 auto;}
 .gallery img { float: left; width: 33.33%; height: 40vh; object-fit: cover; transition: 200ms; transition-delay: 200ms; }
 .gallery-slide { width: 100%; padding: 20px 0; white-space: nowrap; overflow-x: scroll; }
 .gallery-slide img { width: 100%; max-width: 720px;margin: 0 10px; border-radius: 12px; box-shadow: 0 3px 12px #0003; display: inline; }
-
 
 /*  mobile screen */
 @media screen and (max-width: 850px){
