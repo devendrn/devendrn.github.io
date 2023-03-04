@@ -83,7 +83,7 @@ footer p { margin: 0 auto;}
 
 /* todo - complete */
 .card-list { padding-left: 245px;}
-.card-list {text-align: left;}
+.card-list { text-align: left;}
 .card-list img { width: 200px; height: calc(100% - 30px); object-fit: cover; border-radius: 10px; position: absolute; left: 14px;}
 
 /* buttons */
@@ -156,6 +156,10 @@ footer p { margin: 0 auto;}
 	.card-img img,.card-img:hover img{ height: 100%; width: 100%; margin: 0px -5px;}
 	.card-img p, .card-img:hover p { top: 143px; color: #bbbf;}
 	.card-img h3, .card-img:hover h3 { top: 106px; }
+
+	.card-list {padding: 20px; text-align: center;}
+	.card-list img {position: relative; width: 100%; left:0;}
+
 }
 
 /* dark mode */
