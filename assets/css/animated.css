@@ -1,10 +1,11 @@
 /* animations (bg) */
+/* custom properties from main.css are also used here */
 
 /* animated cog wheel - uses fa animation */
 .animated-cog {
 	font-size: 270px;
 	text-shadow: 0 2px 15px #5551;
-	color: #fff;
+	color: var(--bg-a);
 	--fa-animation-duration: 30s;
 }
 
