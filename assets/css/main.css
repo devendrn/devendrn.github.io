@@ -18,6 +18,7 @@
 	--img-bg: #777;
 	--img-grad-top: #0000;
 	--img-grad-bottom: #222f;
+	--border-shadow: 0 2px 8px #0002;
 }
 @media (prefers-color-scheme:dark){
 :root{
@@ -37,6 +38,7 @@
 	--img-bg: #333;
 	--img-grad-top: #0003;
 	--img-grad-bottom: #111e;
+	--border-shadow: 0 3px 10px #0006;
 }
 }
 
@@ -64,9 +66,11 @@ code,.code-block{ font-family: monospace; background-color: var(--code-bg); colo
 .container-spaced { max-width: 630px; margin: 0 auto; overflow: hidden; }
 .container-fill { background-color: var(--bg-b); }
 .container-fill .card { background-color: var(--bg-a);}
+.container-padded { padding: 20px; }
+
 
 /* header navigation bar */
-.navbar { background-color: var(--bg-a); box-shadow: 0 0 4px #0004; position: fixed; width: 100%; z-index: 1; }
+.navbar { background-color: var(--bg-a); box-shadow: 0 0 4px #0004; position: fixed; width: 100%; z-index: 3; }
 .navbar a { color: var(--fg-a); text-align: center; padding: 10px; text-decoration: none; line-height: 20px; transition: 200ms; }
 .navbar a:hover { color: var(--fg-b); }
 .navbar-home { float: left; font-size: 20px; font-weight: 500; letter-spacing: -1px; }
@@ -104,6 +108,7 @@ footer p { margin: 0 auto;}
 	height: calc(100% + 13px);
 	margin: -10px;
 	background-image: linear-gradient(180deg, var(--img-grad-top),var(--img-grad-bottom));
+	z-index:0;
 }
 .card-img img {
 	object-fit: cover;
@@ -120,10 +125,15 @@ footer p { margin: 0 auto;}
 .card-img:active h3 { top: 119px; }
 .card-img:active p { top: 159px; }
 
-/* todo - complete */
-.card-list { padding-left: 245px;}
-.card-list { text-align: left;}
-.card-list img { width: 200px; height: calc(100% - 30px); object-fit: cover; border-radius: 10px; position: absolute; left: 14px;}
+.card-list{ padding: 0; margin: 20px; box-shadow: var(--border-shadow); display: flex; height: 220px; text-align: left; }
+.card-list-img img { object-fit: cover; width:100%; height:100%; }
+.card-list-img { flex: 0 0 280px; }
+.card-list-content { padding: 0; display: flex; flex-direction: column; }
+.card-list-content h4 { margin: 20px; }
+.card-list-content p { margin: 0; padding: 0 20px; flex: 100%; }
+.card-list-links{ transition: 100ms; background-color: var(--bg-b); color: var(--fg-a); font-size: 13px; text-decoration: none; padding: 15px 20px; margin-top: 20px; }
+.card-list-links i { padding-right: 10px; font-size: 17px; }
+.card-list-links:hover { color: var(--fg-b); }
 
 /* buttons */
 .btn {
@@ -196,8 +206,8 @@ footer p { margin: 0 auto;}
 	.card-img p, .card-img:hover p { top: 143px; opacity: 0.7;}
 	.card-img h3, .card-img:hover h3 { top: 106px; }
 
-	.card-list {padding: 20px; text-align: center;}
-	.card-list img {position: relative; width: 100%; left:0;}
+	.card-list { flex-direction: column; height: auto; text-align: center; }
+	.card-list-img { flex: 0 0 150px; }
 }
 
 /* animations - mostly for gallery */
