@@ -1,1 +1,1 @@
-Website built from scratch
+Static website built using HTML and CSS
