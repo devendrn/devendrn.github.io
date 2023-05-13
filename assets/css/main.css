@@ -20,6 +20,7 @@
 	--img-grad-bottom: #222f;
 	--border-shadow: 0 2px 8px #0002;
 }
+
 @media (prefers-color-scheme:dark){
 :root{
 	--bg-a: #181818;
@@ -51,6 +52,7 @@ h4 { font-size: 18px; }
 h1,h2,h3,h4 { font-weight: 500; margin: 20px auto;}
 p { font-size: 15px; }
 p { font-weight: 400;}
+img { background-color: var(--bg-b); }
 code,.code-block{ font-family: monospace; background-color: var(--code-bg); color: var(--code-fg); border-radius: 5px; padding: 3px; }
 .code-block { padding: 6px; overflow: scroll; }
 
@@ -182,10 +184,12 @@ footer p { margin: 0 auto;}
 .btn-social:hover span { bottom: 117%; visibility: visible; opacity: 1;}
 
 /* gallery */
-.gallery { overflow: hidden; border-radius: 10px; margin: 30px 8px; }
-.gallery img { float: left; width: 33.33%; height: 40vh; object-fit: cover; transition: 200ms; transition-delay: 200ms; }
 .gallery-slide { width: 100%; padding: 20px 0; white-space: nowrap; overflow-x: scroll; }
 .gallery-slide img { width: 100%; max-width: 720px;margin: 0 10px; border-radius: 12px; box-shadow: 0 3px 12px #0003; display: inline; }
+.gallery { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 8px; }
+.gallery li { flex-grow: 1; height: 360px; cursor: pointer; position: relative; list-style-type: none; }
+.gallery li img { box-sizing: border-box; object-fit: cover; vertical-align: middle; height: 100%; width: 100%; border-radius: 8px; transition: 200ms; transition-delay: 200ms; }
+.gallery::after { content: ""; flex-grow: 100; }	/* add empy content to fix last stretched image */
 
 /*  mobile screen */
 @media screen and (max-width: 850px){
@@ -197,7 +201,6 @@ footer p { margin: 0 auto;}
 	h3 { font-size: 22px; }
 	h4 { font-size: 18px; }
 	p { font-size: 15px; }
-	.gallery img { width: 100%; height: 100%; }
 	.col12, .col13, .col23,.about .col23 { width: 100%; }
 	.about .col13 { display: none; }
 	.card-img { height: 200px; padding:0; margin: 5px 10px;}
@@ -211,17 +214,15 @@ footer p { margin: 0 auto;}
 }
 
 /* animations - mostly for gallery */
-@keyframes gallery-in { from { margin: 50px 5% 10px 5%; } }
-@keyframes img-fade { from { opacity: 0; } }
+@keyframes img-fade { from { opacity: 0; padding: 10px 30px 30px;} }
 @keyframes gallery-spin { from { opacity: 1;} }
 @keyframes spin { from { transform: rotate(-360deg); } }
 .spinner {
 	content: "";
 	height: 36px; width: 36px;
 	border: solid 4px #888; border-top-color: #0000; border-radius: 50%;
-	animation: 1s linear infinite spin;
+	animation: 0.8s linear infinite spin;
 }
-.gallery { animation: gallery-in; animation-delay: 1s; animation-duration: 0.7s; }
-.gallery img { animation: img-fade; animation-delay: 1s; animation-duration: 0.2s; animation-fill-mode: backwards; }
-.gallery a { opacity: 0; animation: gallery-spin; animation-delay: 1s; animation-fill-mode: backwards; }
+.gallery img { animation: img-fade; animation-delay: 1.5s; animation-duration: 0.5s; animation-fill-mode: backwards; }
+.gallery a { opacity: 0; animation: gallery-spin; animation-delay: 1.6s; animation-fill-mode: backwards; }
 .gallery .spinner { margin-left: -18px; position: fixed; top: 50vh; left: 50%; }
