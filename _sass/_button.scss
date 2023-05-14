@@ -1,0 +1,89 @@
+.btn {
+    background-color: var(--bg-a);
+    color: var(--fg-a);
+    display: inline-block;
+    text-align: center;
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0 2px 4px #0001;
+    text-decoration: none;
+    transition: 200ms;
+}
+
+.btn-wide {
+    padding: 20px 10px;
+    width: 250px;
+    margin: 20px 0;
+    &:hover {
+        padding: 23px 13px;
+        margin: 17px 0;
+    }
+    &:active {
+        padding: 20px 10px;
+        margin: 20px 0;
+    }
+}
+
+.btn-green {
+    background-color: var(--btn-bg-a);
+    &:hover {
+        background-color: var(--btn-bg-a-hover);
+    }
+}
+.btn-blue {
+    background-color: var(--btn-bg-b);
+    &:hover {
+        background-color: var(--btn-bg-b-hover);
+    }
+}
+.btn-orange {
+    background-color: var(--btn-bg-c);
+    &:hover {
+        background-color: var(--btn-bg-c-hover);
+    }
+}
+
+// profile social links/buttons
+.social {
+    margin: 10px -5px;
+    position: absolute;
+    bottom: 15px;
+}
+
+.btn-social {
+    color: var(--fg-a);
+    padding: 6px 0;
+    margin: 4px;
+    width: 40px;
+    height: 25px;
+    span {
+        font-size: 16px;
+        background-color: var(--bg-a);
+        color: var(--fg-a);
+        box-shadow: 0 2px 8px #0002;
+        border-radius: 8px;
+        padding: 5px 10px;
+        position: absolute;
+        bottom: 100%;
+        margin-left: -53px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 230ms;
+        z-index: 1;
+    }
+    &:hover {
+        color: var(--fg-b);
+        padding: 8px 0;
+        margin: 2px 4px;
+        span {
+            bottom: 117%;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    &:active {
+        padding: 6px 0;
+        margin: 4px;
+    }
+}

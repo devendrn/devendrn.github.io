@@ -1,0 +1,150 @@
+
+body {
+    background-color: var(--bg-a);
+    color: var(--fg-a);
+    margin: 0;
+    font: {
+        family: "Open Sans", sans-serif;
+        size: 16px;
+        weight: 400;
+    }
+}
+
+h1 { font-size: 42px; }
+h2 { font-size: 30px; }
+h3 { font-size: 26px; }
+h4 { font-size: 18px; }
+h1, h2, h3, h4 {
+    font-weight: 500;
+    margin: 20px auto;
+}
+
+img {
+    background-color: var(--bg-b);
+}
+
+// code style
+code, .code-block {
+    background-color: var(--code-bg);
+    color: var(--code-fg);
+    font-family: monospace;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.code-block {
+    padding: 6px;
+    overflow: scroll;
+}
+
+// text styles
+.text-thin { font-weight: 300; }
+.text-normal { font-weight: 400; }
+.text-bold { font-weight: 500; }
+.text-center { text-align: center; }
+
+// containers for elements
+.container {
+    position: relative;
+}
+
+.container-section {
+    padding: 50px 0 80px 0;
+}
+
+.container-spaced {
+    max-width: 630px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.container-fill {
+    background-color: var(--bg-b);
+    .card {
+        background-color: var(--bg-a);
+    }
+}
+
+.container-padded {
+    padding: 20px;
+}
+
+// navigation header
+.navbar {
+    background-color: var(--bg-a);
+    box-shadow: 0 0 4px #0004;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    a {
+        color: var(--fg-a);
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        line-height: 20px;
+        transition: 200ms;
+    }
+    & a:hover {
+        color: var(--fg-b);
+    }
+}
+
+.navbar-home {  // logo text
+    float: left;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+.navbar-element {
+    float: right;
+    font-size: 17px;
+}
+
+.navbar-active {
+    box-shadow: inset 0 -2px 0 0 #888;
+}
+
+// copyright footer
+footer {
+    text-align: center;
+    padding: 8px 0;
+    box-shadow: 0 0 4px #0002;
+    p {
+        margin: 0 auto;
+    }
+}
+
+// name heading for front page
+.profile {
+    padding: 90px 30px 70px 30px;
+}
+.profile-name, .profile-about {
+    margin: 10px auto;
+}
+
+// for spliting containers
+.row { width: 100%; overflow: hidden; }
+.col12 { width: 50%; }
+.col13 { width: 33.3%; }
+.col23 { width: 66.7%; }
+.col14 { width: 25%; }
+.col34 { width: 75%; }
+.col12, .col13, .col23,.col14,.col34 {
+    float: left;
+}
+
+// mobile screen
+@media screen and (max-width: 560px) {
+    h1 { font-size: 36px; }
+    h2 { font-size: 29px; }
+    h3 { font-size: 22px; }
+    h4 { font-size: 18px; }
+    p { font-size: 15px; }
+    .col12, .col13, .col23, .about .col23 {
+        width: 100%;
+    }
+    .about .col13 {
+        display: none;
+    }
+}

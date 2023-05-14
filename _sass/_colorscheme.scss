@@ -1,0 +1,43 @@
+// light color scheme vars
+:root {
+    --bg-a: #fff; // background main
+    --bg-b: #eee;
+    --fg-a: #222; // main,a
+    --fg-b: #888; // a hover
+    --btn-bg-a: #7d9;
+    --btn-bg-b: #abd;
+    --btn-bg-c: #dca;
+    --btn-bg-a-hover: #7f9;
+    --btn-bg-b-hover: #abf;
+    --btn-bg-c-hover: #fca;
+    --code-bg: #ddd;
+    --code-fg: #22a;
+    --img-fg: #eee;
+    --img-bg: #777;
+    --img-grad-top: #0000;
+    --img-grad-bottom: #222f;
+    --border-shadow: 0 2px 8px #0002;
+}
+
+// dark color scheme vars
+@media (prefers-color-scheme: dark) {
+:root {
+    --bg-a: #181818;
+    --bg-b: #282828;
+    --fg-a: #fff;
+    --fg-b: #bbb;
+    --btn-bg-a: #296437;
+    --btn-bg-b: #294164;
+    --btn-bg-c: #644829;
+    --btn-bg-a-hover: #239e40;
+    --btn-bg-b-hover: #3d7add;
+    --btn-bg-c-hover: #dd8e2e;
+    --code-bg: #191919;
+    --code-fg: #aad;
+    --img-fg: #eee;
+    --img-bg: #333;
+    --img-grad-top: #0003;
+    --img-grad-bottom: #111e;
+    --border-shadow: 0 3px 10px #0006;
+}
+}

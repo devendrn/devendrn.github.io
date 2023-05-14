@@ -1,0 +1,100 @@
+// todo - should probably be converted into a generic image scss
+
+// used by gallery only now
+.spinner {
+    content: "";
+    height: 36px;
+    width: 36px;
+    border: solid 4px #888;
+    border-top-color: #0000;
+    border-radius: 50%;
+    animation: 0.8s linear infinite spin;
+}
+
+// used by newb page
+.gallery-slide {
+    width: 100%;
+    padding: 20px 0;
+    white-space: nowrap;
+    overflow-x: scroll;
+    img {
+        width: 100%;
+        max-width: 720px;
+        margin: 0 10px;
+        border-radius: 12px;
+        box-shadow: 0 3px 12px #0003;
+        display: inline;
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 8px;
+    li {
+        flex-grow: 1;
+        height: 360px;
+        cursor: pointer;
+        position: relative;
+        list-style-type: none;
+        img {
+            box-sizing: border-box;
+            object-fit: cover;
+            vertical-align: middle;
+            height: 100%;
+            width: 100%;
+            border-radius: 8px;
+            transition: 200ms;
+            transition-delay: 200ms;
+            animation: img-fade {
+                delay: 1.5s;
+                duration: 0.5s;
+                fill-mode: backwards;
+            }
+        }
+    }
+    a {
+        opacity: 0;
+        animation: gallery-spin {
+            delay: 1.6s;
+            fill-mode: backwards;
+        }
+    }
+    .spinner {
+        margin-left: -18px;
+        position: fixed;
+        top: 50vh;
+        left: 50%;
+    }
+    &::after {
+        // add empy content to fix last stretched image
+        content: "";
+        flex-grow: 100;
+    }
+}
+
+// animation states
+@keyframes img-fade {
+    from {
+        opacity: 0;
+        padding: 10px 30px 30px;
+    }
+}
+@keyframes gallery-spin {
+    from {
+        opacity: 1;
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(-360deg);
+    }
+}
+
+//  mobile screen 
+@media screen and (max-width: 850px) {
+    .gallery img {
+        width: 50%;
+    }
+}
