@@ -1,12 +1,12 @@
+@use 'mixin/all' as *;
+
 .btn {
-    background-color: var(--bg-a);
-    color: var(--fg-a);
+    @include col(bg-a,fg-a);
+    @include border(10px,2);
     display: inline-block;
     text-align: center;
     padding: 6px;
-    border-radius: 10px;
     font-size: 18px;
-    box-shadow: 0 2px 4px #0001;
     text-decoration: none;
     transition: 200ms;
 }
@@ -26,21 +26,21 @@
 }
 
 .btn-green {
-    background-color: var(--btn-bg-a);
+    @include col(btn-bg-a,null);
     &:hover {
-        background-color: var(--btn-bg-a-hover);
+        @include col(btn-bg-a-hover,null);
     }
 }
 .btn-blue {
-    background-color: var(--btn-bg-b);
+    @include col(btn-bg-b,null);
     &:hover {
-        background-color: var(--btn-bg-b-hover);
+        @include col(btn-bg-b-hover,null);
     }
 }
 .btn-orange {
-    background-color: var(--btn-bg-c);
+    @include col(btn-bg-c,null);
     &:hover {
-        background-color: var(--btn-bg-c-hover);
+        @include col(btn-bg-c-hover,null);
     }
 }
 
@@ -52,17 +52,13 @@
 }
 
 .btn-social {
-    color: var(--fg-a);
     padding: 6px 0;
     margin: 4px;
     width: 40px;
     height: 25px;
     span {
-        font-size: 16px;
-        background-color: var(--bg-a);
-        color: var(--fg-a);
-        box-shadow: 0 2px 8px #0002;
-        border-radius: 8px;
+        @include col(bg-a,fg-a);
+        @include border(10px,3);
         padding: 5px 10px;
         position: absolute;
         bottom: 100%;
@@ -73,7 +69,7 @@
         z-index: 1;
     }
     &:hover {
-        color: var(--fg-b);
+        @include col(null,fg-b);
         padding: 8px 0;
         margin: 2px 4px;
         span {

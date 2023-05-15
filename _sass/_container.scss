@@ -1,7 +1,7 @@
+@use 'mixin/all' as *;
 
 body {
-    background-color: var(--bg-a);
-    color: var(--fg-a);
+    @include col(bg-a,fg-a);
     margin: 0;
     font: {
         family: "Open Sans", sans-serif;
@@ -20,16 +20,15 @@ h1, h2, h3, h4 {
 }
 
 img {
-    background-color: var(--bg-b);
+    @include col(bg-b,null);
 }
 
 // code style
 code, .code-block {
-    background-color: var(--code-bg);
-    color: var(--code-fg);
+    @include col(code-bg,code-fg);
+    @include border(5px,0);
     font-family: monospace;
     padding: 3px;
-    border-radius: 5px;
 }
 
 .code-block {
@@ -49,7 +48,7 @@ code, .code-block {
 }
 
 .container-section {
-    padding: 50px 0 80px 0;
+    padding: 50px 0 80px;
 }
 
 .container-spaced {
@@ -59,9 +58,9 @@ code, .code-block {
 }
 
 .container-fill {
-    background-color: var(--bg-b);
+    @include col(bg-b,null);
     .card {
-        background-color: var(--bg-a);
+        @include col(bg-a,null);
     }
 }
 
@@ -71,13 +70,13 @@ code, .code-block {
 
 // navigation header
 .navbar {
-    background-color: var(--bg-a);
+    @include col(bg-a,null);
     box-shadow: 0 0 4px #0004;
     position: fixed;
     width: 100%;
     z-index: 3;
     a {
-        color: var(--fg-a);
+        @include col(null,fg-a);
         text-align: center;
         padding: 10px;
         text-decoration: none;
@@ -85,7 +84,7 @@ code, .code-block {
         transition: 200ms;
     }
     & a:hover {
-        color: var(--fg-b);
+        @include col(null,fg-b);
     }
 }
 
@@ -144,7 +143,7 @@ footer {
     .col12, .col13, .col23, .about .col23 {
         width: 100%;
     }
-    .about .col13 {
+    .about .col13 { // no animated cogwheel
         display: none;
     }
 }
