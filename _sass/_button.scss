@@ -6,22 +6,24 @@
     display: inline-block;
     text-align: center;
     padding: 6px;
-    font-size: 18px;
     text-decoration: none;
     transition: 200ms;
 }
 
 .btn-wide {
     padding: 20px 10px;
-    width: 250px;
-    margin: 20px 0;
+    width: 256px;
+    margin: 8px 3px;
     &:hover {
         padding: 23px 13px;
-        margin: 17px 0;
+        margin: 5px 0;
     }
     &:active {
         padding: 20px 10px;
-        margin: 20px 0;
+        margin: 8px 3px;
+    }
+    i {
+        padding-right: 5px;
     }
 }
 

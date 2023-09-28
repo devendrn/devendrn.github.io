@@ -28,115 +28,126 @@
 		<a class="navbar-element" href="downloads.html">Downloads</a>
 	</header>
 
-	<div class="container container-section">
+	<div class="container container-heading container-spaced container-l">
 		<h2 class="text-center">Customization</h2>
-		<div class="container container-spaced">
-			<div class="card">
-				<p>Warning: Making wrong changes to the files may cause shader to become invisible.</p>
-				<p>Some files have parts of code after configuration section. Don't mess with the code section unless you understand what you are doing.</p>
-				<p>Make sure you are using "External Storage" in Minecraft settings.</p>
-			</div>
-		</div>
+    <div class="card">
+      <p>Warning: Making wrong changes to the files may cause shader to become invisible.</p>
+      <p>Some files have parts of code after configuration section. Don't mess with the code section unless you understand what you are doing.</p>
+      <p>Make sure you are using "External Storage" in Minecraft settings.</p>
+    </div>
+  </div>
+
+	<div class="container container-section container-spaced container-l">
 		<h3 class="text-center">Main steps</h3>
-		<div class="container container-spaced">
-			<div class="card">
-				<p>1. Using a file manager, navigate to this folder:</p>
-				<p class="code-block">/storage/games/com.mojang/resource_packs/NewbShader/shaders/glsl/config_utilities</p>
-				<p class="code-block">/storage/Android/data/com.mojang.minecraftpe/files/games/com.mojang/resource_packs/NewbShader/shaders/glsl/config_utilities</p>
-				<p>2. Open the required config file using a text editor and after making your changes, save the file.</p>
-				<p>3. Open Minecraft to see changes. You can launch Minecraft from recents/background without having to restart it completely.</p>
-			</div>
-			<h3 class="text-center">Making changes</h3>
-			<div class="card">
-				<h4>Toggle options</h4>
-				<p>Add <code>//</code> before <code>#define</code> to turn it off.</p>
-				<p><code>#define EXAMPLE</code>&emsp;EXAMPLE enabled<br><code>//#define EXAMPLE</code>&emsp;EXAMPLE disabled</p>
-			</div>
-			<div class="card">
-				<h4>Value options</h4>
-				<p>Values must be in decimal format. eg: 1.7,0.1,0.0<br>Don't toggle unless specified "Toggle + Value".</p>
-				<p><code>#define example 1.23</code></p>
-			</div>
-			<div class="card">
-				<h4>Color options</h4>
-				<p>Colors are in RGB format (range 0.0-1.0 for most options) </p>
-				<p><code>const vec3 example = vec3(red,green,blue);</code></p>
-				<p>Some color examples:<br>vec3(0.0,0.0,0.0) - black<br>vec3(1.0,1.0,1.0) - white<br>vec3(1.0,0.0,0.0) - red<br>vec3(1.0,0.0,1.0) - magenta</p>
-			</div>
-			<div class="card">
-				<h4>Type options</h4>
-				<p>0,1,2,3... (choose between types using numbers)</p>
-				<p><code>// read_this<br>#define EXAMPLE_TYPE 2</code></p>
-			</div>
-			<h3 class="text-center">Config Files</h3>
-			<p class="text-center">List of config files and their options</p>
-			<div class="row">
-				<div class="col12">
-					<div class="card">
-						<h4>terrain.h</h4>
-						<p>
-							Terrain lighting<br>
-							Underwater lighting<br>
-							Foliage, lantern wave<br>
-							Water settings<br><br>
-						</p>
-					</div>
-				</div>
-				<div class="col12">
-					<div class="card">
-						<h4>color.h</h4>
-						<p>
-							Tonemapping<br>
-							Exposure<br>
-							Contrast<br>
-							Saturation<br>
-							Tinting
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col12">
-					<div class="card">
-						<h4>clouds.h</h4>
-						<p>
-							Cloud settings<br>
-							Aurora<br><br><br>
-						</p>
-					</div>
-				</div>
-				<div class="col12">
-					<div class="card">
-						<h4>global.h</h4>
-						<p>
-							Light intensity<br>
-							Animation time<br>
-							Mist intensity<br>
-							Fog type
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col12">
-					<div class="card">
-						<h4>sky.h</h4>
-						<p>
-							Sky colors<br>
-							Underwater fog color<br><br>
-						</p>
-					</div>
-				</div>
-				<div class="col12">
-					<div class="card">
-						<h4>extra.h</h4>
-						<p>
-							Sun/moon rotation<br>
-							Glow textures<br>
-							GUI touch circle
-						</p>
-					</div>
-				</div>
+    <div class="card">
+      <p>1. Using a file manager, navigate to this folder:</p>
+      <p class="code-block">/storage/games/com.mojang/resource_packs/NewbShader/shaders/glsl/config_utilities</p>
+      <p class="code-block">/storage/Android/data/com.mojang.minecraftpe/files/games/com.mojang/resource_packs/NewbShader/shaders/glsl/config_utilities</p>
+      <p>2. Open the required config file using a text editor and after making your changes, save the file.</p>
+      <p>3. Open Minecraft to see changes. You can launch Minecraft from recents/background without having to restart it completely.</p>
+    </div>
+  </div>
+
+	<div class="container container-section">
+		<h3 class="text-center">Making changes</h3>
+    <div class="container-flex">
+      <div class="container-l">
+        <div class="card">
+          <h4>Toggle options</h4>
+          <p>Add <code>//</code> before <code>#define</code> to turn it off.</p>
+          <p><code>#define EXAMPLE</code>&emsp;EXAMPLE enabled<br><code>//#define EXAMPLE</code>&emsp;EXAMPLE disabled</p>
+        </div>
+      </div>
+      <div class="container-l">
+        <div class="card">
+          <h4>Value options</h4>
+          <p>Values must be in decimal format. eg: 1.7,0.1,0.0<br>Don't toggle unless specified "Toggle + Value".</p>
+          <p><code>#define example 1.23</code></p>
+        </div>
+      </div>
+      <div class="container-l">
+        <div class="card">
+          <h4>Color options</h4>
+          <p>Colors are in RGB format (range 0.0-1.0 for most options) </p>
+          <p><code>const vec3 example = vec3(red,green,blue);</code></p>
+          <p>Some color examples:<br>vec3(0.0,0.0,0.0) - black<br>vec3(1.0,1.0,1.0) - white<br>vec3(1.0,0.0,0.0) - red<br>vec3(1.0,0.0,1.0) - magenta</p>
+        </div>
+      </div>
+      <div class="container-l">
+        <div class="card">
+          <h4>Type options</h4>
+          <p>0,1,2,3... (choose between types using numbers)</p>
+          <p><code>// read_this<br>#define EXAMPLE_TYPE 2</code></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<div class="container container-section">
+    <h3 class="text-center">Config Files</h3>
+    <p class="text-center">List of config files and their options</p>
+	  <div class="container-flex">
+	    <div class="container-l">
+        <div class="card">
+          <h4>terrain.h</h4>
+          <p>
+            Terrain lighting<br>
+            Underwater lighting<br>
+            Foliage, lantern wave<br>
+            Water settings<br><br>
+          </p>
+        </div>
+      </div>
+	    <div class="container-l">
+        <div class="card">
+          <h4>color.h</h4>
+          <p>
+            Tonemapping<br>
+            Exposure<br>
+            Contrast<br>
+            Saturation<br>
+            Tinting
+          </p>
+        </div>
+      </div>
+	    <div class="container-l">
+        <div class="card">
+          <h4>clouds.h</h4>
+          <p>
+            Cloud settings<br>
+            Aurora<br><br><br>
+          </p>
+        </div>
+      </div>
+	    <div class="container-l">
+        <div class="card">
+          <h4>global.h</h4>
+          <p>
+            Light intensity<br>
+            Animation time<br>
+            Mist intensity<br>
+            Fog type
+          </p>
+        </div>
+      </div>
+	    <div class="container-l">
+        <div class="card">
+          <h4>sky.h</h4>
+          <p>
+            Sky colors<br>
+            Underwater fog color<br><br>
+          </p>
+        </div>
+      </div>
+	    <div class="container-l">
+        <div class="card">
+          <h4>extra.h</h4>
+          <p>
+            Sun/moon rotation<br>
+            Glow textures<br>
+            GUI touch circle
+          </p>
+        </div>
 			</div>
 		</div>
 	</div>

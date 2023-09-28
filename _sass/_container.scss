@@ -17,10 +17,28 @@ h4 { font-size: 18px; }
 h1, h2, h3, h4 {
     font-weight: 500;
     margin: 20px auto;
+    i {
+        padding-right: 16px;
+    }
+}
+
+p a {
+  &:link {
+     @include col(null,link-normal);
+     text-decoration: none;
+  }
+  &:visited {
+      @include col(null,link-visited);
+     text-decoration: none;
+  }
+  &:hover {
+      @include col(null,link-visited);
+     text-decoration: underline;
+  }
 }
 
 img {
-    @include col(bg-b,null);
+    @include col(bg-b,bg-b);
 }
 
 // code style
@@ -47,14 +65,37 @@ code, .code-block {
     position: relative;
 }
 
+.container-heading {
+  padding: 50px 0 20px;
+}
+
 .container-section {
-    padding: 50px 0 80px;
+    padding: 20px 0;
+}
+
+.container-s {
+    max-width: 400px;
+}
+
+.container-m {
+    max-width: 600px;
+}
+
+.container-l {
+    max-width: 800px;
 }
 
 .container-spaced {
-    max-width: 630px;
     margin: 0 auto;
     overflow: hidden;
+}
+
+.container-flex {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .container-fill {
