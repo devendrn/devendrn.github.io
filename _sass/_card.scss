@@ -5,14 +5,19 @@
 .card {
     @include col(bg-b,null);
     @include border(15px,0);
-    padding: 15px 30px;
+    padding: 12px 20px;
     margin: 10px;
     overflow: hidden;
     position: relative;
 }
 
+
+.card-m {
+  max-width: 450px;
+}
+
 .card-short {
-    height: 220px;
+    height: 210px;
 }
 
 // hover cards
@@ -132,19 +137,19 @@
     }
 }
 .card-list-links {
-    @include col(bg-b,fg-a);
+    @include col(bg-a,fg-a);
+    border-top: solid 2px var(--bg-b);
     transition: 100ms;
     font-size: 13px;
     text-decoration: none;
     padding: 15px 20px;
     margin-top: 20px;
-
     i {
         padding-right: 10px;
         font-size: 17px;
     }
     &:hover {
-        color: var(--fg-b);
+        @include col(bg-b,null);
     }
 }
 

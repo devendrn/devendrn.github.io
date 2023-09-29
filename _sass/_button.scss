@@ -6,6 +6,7 @@
     display: inline-block;
     text-align: center;
     padding: 6px;
+    font-size: 18px;
     text-decoration: none;
     transition: 200ms;
 }
@@ -14,6 +15,13 @@
     padding: 20px 10px;
     width: 256px;
     margin: 8px 3px;
+    font-weight: 600;
+    background-image: linear-gradient(45deg, #f003, #0f03);
+    i {
+        padding-right: 10px;
+        text-shadow: 0 0 9px #fff0;
+        transition: 200ms;
+    }
     &:hover {
         padding: 23px 13px;
         margin: 5px 0;
@@ -22,27 +30,24 @@
         padding: 20px 10px;
         margin: 8px 3px;
     }
-    i {
-        padding-right: 5px;
-    }
 }
 
 .btn-green {
-    @include col(btn-bg-a,null);
+    @include col(btn-bg-a,bg-a);
     &:hover {
-        @include col(btn-bg-a-hover,null);
+        @include col(btn-bg-a-hover,bg-a);
     }
 }
 .btn-blue {
-    @include col(btn-bg-b,null);
+    @include col(btn-bg-b,bg-a);
     &:hover {
-        @include col(btn-bg-b-hover,null);
+        @include col(btn-bg-b-hover,bg-a);
     }
 }
 .btn-orange {
-    @include col(btn-bg-c,null);
+    @include col(btn-bg-c,bg-a);
     &:hover {
-        @include col(btn-bg-c-hover,null);
+        @include col(btn-bg-c-hover,bg-a);
     }
 }
 

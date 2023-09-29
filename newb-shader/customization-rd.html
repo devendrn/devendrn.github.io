@@ -38,39 +38,17 @@
     </div>
   </div>
 
-	<div class="container container-flex container-section">
-		<div class="container-m">
-			<h3 class="text-center"><i class="fa-brands fa-windows"></i>Windows</h3>
-			<div class="card">
-				<h3>Setup</h3>
-				<a class="btn btn-wide btn-blue" href="https://github.com/devendrn/newb-x-mcbe/archive/refs/heads/main.zip">
-					<i class="fa-brands fa-github"></i> newb-x-mcbe-source.zip
-				</a><br>
-				<p>1. Download shader repository zip</p>
-				<p>2. Extract contents into a folder</p>
-				<p>3. Go inside the folder and open cmd there</p>
-				<p>4. Run <code>.\setup.bat</code></p>
-			</div>
-			<div class="card">
-				<h3>Building</h3>
-				<p>To build all shader files, do:</p>
-				<p class="code-block">.\build.bat</p>
-				<p>When editing config, you generally want to save build time by only building shader files you need:</p>
-				<p class="code-block">.\build.bat -m RenderChunk</p>
-				<p>This will only build the terrain file. The output will be in <code>build</code> folder.</p>
-				<p>Config is inside  <code>include/newb_config_legacy.h</code>. Open this file using a text editor to edit the values. After making a change, build the shader and test it to make sure it works.</p>
-			</div>
-		</div>
+	<div class="container container-flex">
 		<div class="container-m">
 			<h3 class="text-center"><i class="fa-brands fa-android"></i>Android</h3>
 			<div class="card">
 				<h3>Setup</h3>
-				<p>Requires around 200mb data to download necessary files - Only one time</p>
+				<p>Requires around 200Mb data to download necessary apps and files.</p>
 				<a class="btn btn-wide btn-blue" href="https://f-droid.org/repo/com.termux_118.apk">
-					<i class="fa-solid fa-terminal"></i> Termux
+					<i class="fa-solid fa-terminal"></i>Termux
 				</a><br>
 				<a class="btn btn-wide btn-blue" href="https://play.google.com/store/apps/details?id=in.mfile">
-					<i class="fa-solid fa-folder"></i> NMM File Manager
+					<i class="fa-solid fa-folder"></i>NMM File Manager
 				</a><br>
 				<p>1. Install <b>Termux</b> (For building shader)</p>
 				<p>2. Install <b>NMM File Manager</b> (For editing) - You can also use Acode instead</p>
@@ -87,10 +65,32 @@
 				<p class="code-block">cd newb-x-mcbe</p>
 				<p>Now build files by:</p>
 				<p class="code-block">./build.sh</p>
-				<p>When editing config, you generally want to save build time by only building shader files you need:</p>
+				<p>To build only terrain shader (saves time):</p>
 				<p class="code-block">./build.sh -m RenderChunk</p>
-				<p>This will only build the terrain file. The output will be in <code>build</code> folder.</p>
+				<p>The output will be in <code>build</code> folder.</p>
 				<p>To edit config, Open NMM, goto termux's <code>home/newb-x-mcbe/include/newb_config_legacy.h</code>. After making a change, build the shader and test it to make sure it works.</p>
+			</div>
+		</div>
+		<div class="container-m">
+			<h3 class="text-center"><i class="fa-brands fa-windows"></i>Windows</h3>
+			<div class="card">
+				<h3>Setup</h3>
+				<a class="btn btn-wide btn-blue" href="https://github.com/devendrn/newb-x-mcbe/archive/refs/heads/main.zip">
+					<i class="fa-brands fa-github"></i>newb-x-mcbe-source.zip
+				</a><br>
+				<p>1. Download shader repository zip</p>
+				<p>2. Extract contents into a folder</p>
+				<p>3. Go inside the folder and open cmd there</p>
+				<p>4. Run <code>.\setup.bat</code></p>
+			</div>
+			<div class="card">
+				<h3>Building</h3>
+				<p>To build all shader files, do:</p>
+				<p class="code-block">.\build.bat</p>
+				<p>When editing config, you generally want to save build time by only building shader files you need:</p>
+				<p class="code-block">.\build.bat -m RenderChunk</p>
+				<p>This will only build the terrain file. The output will be in <code>build</code> folder.</p>
+				<p>Config is inside  <code>include\newb_config_legacy.h</code>. Open this file using a text editor to edit the values. After making a change, build the shader and test it to make sure it works.</p>
 			</div>
 		</div>
 	</div>

@@ -10,13 +10,29 @@ body {
     }
 }
 
-h1 { font-size: 42px; }
-h2 { font-size: 30px; }
-h3 { font-size: 26px; }
-h4 { font-size: 18px; }
+h1 { 
+    font-size: 42px;
+    margin: 20px auto;
+}
+h2 {
+    font-size: 30px;
+    margin: 16px auto;
+}
+h3 {
+    font-size: 26px;
+    margin: 14px auto;
+}
+h4 {
+    font-size: 18px;
+    margin: 12px auto;
+}
+p {
+    font-size: 16px;
+    margin: 12px auto;
+}
+
 h1, h2, h3, h4 {
     font-weight: 500;
-    margin: 20px auto;
     i {
         padding-right: 16px;
     }
@@ -24,21 +40,25 @@ h1, h2, h3, h4 {
 
 p a {
   &:link {
-     @include col(null,link-normal);
-     text-decoration: none;
+      @include col(null,link-normal);
+      text-decoration: none;
   }
   &:visited {
       @include col(null,link-visited);
-     text-decoration: none;
+      text-decoration: none;
   }
   &:hover {
       @include col(null,link-visited);
-     text-decoration: underline;
+      text-decoration: underline;
   }
 }
 
 img {
     @include col(bg-b,bg-b);
+}
+
+iframe {
+    @include border(10px,0);
 }
 
 // code style
@@ -91,7 +111,7 @@ code, .code-block {
 }
 
 .container-flex {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
