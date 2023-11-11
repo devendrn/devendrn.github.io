@@ -54,24 +54,11 @@ p a {
 }
 
 img {
-    @include col(bg-b,bg-b);
+    @include col(img-bg,img-fg);
 }
 
 iframe {
     @include border(10px,0);
-}
-
-// code style
-code, .code-block {
-    @include col(code-bg,code-fg);
-    @include border(5px,0);
-    font-family: monospace;
-    padding: 3px;
-}
-
-.code-block {
-    padding: 6px;
-    overflow: scroll;
 }
 
 // text styles

@@ -53,20 +53,32 @@
 				<p>1. Install <b>Termux</b> (For building shader)</p>
 				<p>2. Install <b>NMM File Manager</b> (For editing) - You can also use Acode instead</p>
 				<p>3. Open Termux and run the following commands</p>
-				<p class="code-block">pkg install openjdk-17 git --no-install-recommends</p>
-				<p class="code-block">git clone https://github.com/devendrn/newb-x-mcbe</p>
-				<p class="code-block">cd newb-x-mcbe</p>
-				<p class="code-block">./setup.sh</p>
+				<div class="code-snippet">
+					<pre><code>pkg install openjdk-17 git --no-install-recommends</code></pre>
+				</div>
+				<div class="code-snippet">
+					<pre><code>git clone https://github.com/devendrn/newb-x-mcbe</code></pre>
+				</div>
+				<div class="code-snippet">
+					<pre><code>cd newb-x-mcbe
+./setup.sh</code></pre>
+				</div>
 				<p>4. Launch NMM File Manager and open sidebar. Click + icon and choose External Storage. Select Termux app in sidebar and accept permission.</p>
 			</div>
 			<div class="card">
 				<h3>Building</h3>
 				<p>In Termux, go inside newb-x-mcbe folder</p>
-				<p class="code-block">cd newb-x-mcbe</p>
+				<div class="code-snippet">
+					<pre><code>cd newb-x-mcbe</code></pre>
+				</div>
 				<p>Now build files by:</p>
-				<p class="code-block">./build.sh</p>
+				<div class="code-snippet">
+					<pre><code>./build.sh</code></pre>
+				</div>
 				<p>To build only terrain shader (saves time):</p>
-				<p class="code-block">./build.sh -m RenderChunk</p>
+				<div class="code-snippet">
+					<pre><code>./build.sh -m RenderChunk</code></pre>
+				</div>
 				<p>The output will be in <code>build</code> folder.</p>
 				<p>To edit config, Open NMM, goto termux's <code>home/newb-x-mcbe/include/newb_config_legacy.h</code>. After making a change, build the shader and test it to make sure it works.</p>
 			</div>
@@ -86,9 +98,14 @@
 			<div class="card">
 				<h3>Building</h3>
 				<p>To build all shader files, do:</p>
-				<p class="code-block">.\build.bat</p>
+				<div class="code-snippet">
+					<pre><code>.\build.bat</code></pre>
+				</div>
 				<p>When editing config, you generally want to save build time by only building shader files you need:</p>
-				<p class="code-block">.\build.bat -m RenderChunk</p>
+
+				<div class="code-snippet">
+					<pre><code>.\build.bat -m RenderChunk</code></pre>
+				</div>
 				<p>This will only build the terrain file. The output will be in <code>build</code> folder.</p>
 				<p>Config is inside  <code>include\newb_config_legacy.h</code>. Open this file using a text editor to edit the values. After making a change, build the shader and test it to make sure it works.</p>
 			</div>
@@ -99,6 +116,7 @@
 		<p>Copyright &copy; 2023 devendrn</p>
 	</footer>
 
+  <script src="../js/code_snippet.js"></script>
 </body>
 
 </html>
