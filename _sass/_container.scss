@@ -26,7 +26,7 @@ h4 {
     font-size: 18px;
     margin: 12px auto;
 }
-p {
+p, code {
     font-size: 16px;
     margin: 12px auto;
 }
@@ -73,7 +73,7 @@ iframe {
 }
 
 .container-heading {
-  padding: 50px 0 20px;
+    padding: 50px 0 20px;
 }
 
 .container-section {
@@ -85,7 +85,7 @@ iframe {
 }
 
 .container-m {
-    max-width: 600px;
+    max-width: 640px;
 }
 
 .container-l {
@@ -98,11 +98,18 @@ iframe {
 }
 
 .container-flex {
-    max-width: 1280px;
-    margin: 0 auto;
+    max-width: 1400px;
+    margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    .container-m {
+        display: flex;
+        flex-flow: column;
+        .card {
+            flex: 1 1 auto;
+        }
+    }
 }
 
 .container-fill {

@@ -37,6 +37,12 @@
     }
 }
 
+@keyframes shimmer {
+    to {
+       background-position-x: 0%;
+    }
+ }
+
 .container {
     * { // containers fade in first
         animation: container-anim {
@@ -81,6 +87,14 @@
     .card-img img { // card img cant have anim
         animation: unset;
     }
+
+    .btn-shimmer {
+        background-image: linear-gradient(30deg, #a00f, #0a0f, #00af);
+        background-blend-mode: hue;
+        background-size: 1000%;
+        background-position-x: 100%;
+        animation: shimmer 6s infinite ease-in-out alternate-reverse;
+    }
 }
 
 .gallery {
@@ -105,4 +119,3 @@
         }
     }
 }
-

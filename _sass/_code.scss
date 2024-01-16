@@ -42,10 +42,11 @@ code, .code-block {
   code {
     padding: 0;
     border-radius: 0;
+    padding-right: 52px;
   }
 
   pre {
-    overflow: scroll;
+    overflow-x: scroll;
     padding: 15px 16px;
   }
 }

@@ -18,7 +18,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<script src="https://kit.fontawesome.com/7c25d04827.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -33,8 +33,8 @@
 		<h2 class="text-center">Customization</h2>
 		<p class="text-center">of Newb X Legacy</p>
     <div class="card">
-      <p>To customize the shader, you would have to download the shader source code and setup the build environment.</p>
-      <p>If you are having issues following this guide, you can ask for help on the Discord server.</p>
+      <p>Customizing Newb X Legacy is not as simple as just editing a text file. If you still want to try, go ahead. You can ask for help on our Discord server if you face issues in following this guide.</p>
+	  <p>To learn more about RenderDragon shaders take a look at this <a href="https://devendrn.github.io/renderdragon-shaders/docs/start.html">documentaion.</a></p>
     </div>
   </div>
 
@@ -46,7 +46,7 @@
 				<p>Requires around 200Mb data to download necessary apps and files.</p>
 				<a class="btn btn-wide btn-blue" href="https://f-droid.org/repo/com.termux_118.apk">
 					<i class="fa-solid fa-terminal"></i>Termux
-				</a><br>
+				</a>
 				<a class="btn btn-wide btn-blue" href="https://play.google.com/store/apps/details?id=in.mfile">
 					<i class="fa-solid fa-folder"></i>NMM File Manager
 				</a><br>
@@ -75,12 +75,12 @@
 				<div class="code-snippet">
 					<pre><code>./build.sh</code></pre>
 				</div>
-				<p>To build only terrain shader (saves time):</p>
+				<p>To build only some materials, run (saves time):</p>
 				<div class="code-snippet">
-					<pre><code>./build.sh -m RenderChunk</code></pre>
+					<pre><code>./build.sh -m RenderChunk Sky</code></pre>
 				</div>
 				<p>The output will be in <code>build</code> folder.</p>
-				<p>To edit config, Open NMM, goto termux's <code>home/newb-x-mcbe/include/newb_config_legacy.h</code>. After making a change, build the shader and test it to make sure it works.</p>
+				<p>To edit config, Open NMM, goto termux's <code>home/newb-x-mcbe/include/newb/config.h</code>. After making a change, build the shader and test it to make sure it works.</p>
 			</div>
 		</div>
 		<div class="container-m">
@@ -90,13 +90,14 @@
 				<a class="btn btn-wide btn-blue" href="https://github.com/devendrn/newb-x-mcbe/archive/refs/heads/main.zip">
 					<i class="fa-brands fa-github"></i>newb-x-mcbe-source.zip
 				</a><br>
-				<p>1. Download shader repository zip</p>
-				<p>2. Extract contents into a folder</p>
-				<p>3. Go inside the folder and open cmd there</p>
-				<p>4. Run <code>.\setup.bat</code></p>
+				<p>1. Download shader repository ZIP.</p>
+				<p>2. Extract contents into a folder.</p>
+				<p>3. Go inside the folder and open command prompt there.</p>
+				<p>4. Run <code>.\setup.bat</code>. This will download MBT, shaderc, and material data required to build shader.</p>
 			</div>
 			<div class="card">
 				<h3>Building</h3>
+				<p>Navigate to newb-x-mcbe folder.</p>
 				<p>To build all shader files, do:</p>
 				<div class="code-snippet">
 					<pre><code>.\build.bat</code></pre>
@@ -104,16 +105,16 @@
 				<p>When editing config, you generally want to save build time by only building shader files you need:</p>
 
 				<div class="code-snippet">
-					<pre><code>.\build.bat -m RenderChunk</code></pre>
+					<pre><code>.\build.bat -m RenderChunk Sky</code></pre>
 				</div>
 				<p>This will only build the terrain file. The output will be in <code>build</code> folder.</p>
-				<p>Config is inside  <code>include\newb_config_legacy.h</code>. Open this file using a text editor to edit the values. After making a change, build the shader and test it to make sure it works.</p>
+				<p>Config is inside  <code>include\newb\config.h</code>. Open this file using a text editor to edit the values. After making a change, build the shader and test it to make sure it works.</p>
 			</div>
 		</div>
 	</div>
 
 	<footer>
-		<p>Copyright &copy; 2023 devendrn</p>
+		<p>Copyright &copy; 2024 devendrn</p>
 	</footer>
 
   <script src="../js/code_snippet.js"></script>

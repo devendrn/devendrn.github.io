@@ -72,7 +72,7 @@ h4 {
   margin: 12px auto;
 }
 
-p {
+p, code {
   font-size: 16px;
   margin: 12px auto;
 }
@@ -139,7 +139,7 @@ iframe {
 }
 
 .container-m {
-  max-width: 600px;
+  max-width: 640px;
 }
 
 .container-l {
@@ -152,11 +152,18 @@ iframe {
 }
 
 .container-flex {
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 1400px;
+  margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.container-flex .container-m {
+  display: flex;
+  flex-flow: column;
+}
+.container-flex .container-m .card {
+  flex: 1 1 auto;
 }
 
 .container-fill {
@@ -292,7 +299,8 @@ footer p {
   width: 256px;
   margin: 8px 3px;
   font-weight: 600;
-  background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.2), rgba(0, 255, 0, 0.2));
+  background-image: linear-gradient(45deg, rgba(255, 0, 0, 0.4), rgba(0, 255, 0, 0.4));
+  background-blend-mode: lighten;
 }
 .btn-wide:hover {
   padding: 23px 13px;
@@ -563,7 +571,8 @@ footer p {
 
 .gallery-slide {
   width: 100%;
-  padding: 20px 0;
+  box-sizing: border-box;
+  padding: 10px 30px;
   white-space: nowrap;
   overflow-x: scroll;
 }
@@ -648,6 +657,11 @@ footer p {
     transform: rotate(-360deg);
   }
 }
+@keyframes shimmer {
+  to {
+    background-position-x: 0%;
+  }
+}
 .container * {
   animation: container-anim;
   animation-delay: 0.1s;
@@ -683,6 +697,13 @@ footer p {
 }
 .container .card-img img {
   animation: unset;
+}
+.container .btn-shimmer {
+  background-image: linear-gradient(30deg, #aa0000, #00aa00, #0000aa);
+  background-blend-mode: hue;
+  background-size: 1000%;
+  background-position-x: 100%;
+  animation: shimmer 6s infinite ease-in-out alternate-reverse;
 }
 
 .gallery .spinner {
@@ -747,9 +768,10 @@ code, .code-block {
 .code-snippet code {
   padding: 0;
   border-radius: 0;
+  padding-right: 52px;
 }
 .code-snippet pre {
-  overflow: scroll;
+  overflow-x: scroll;
   padding: 15px 16px;
 }
 
