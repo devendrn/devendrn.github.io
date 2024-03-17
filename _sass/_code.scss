@@ -1,15 +1,15 @@
 @use 'mixin/all' as *;
 
 code, .code-block {
-    @include col(bg-a,fg-a);
-    @include border(8px,0);
-    font-family: monospace;
-    padding: 3px;
+  @include col(bg-a,fg-a);
+  @include border(8px,0);
+  font-family: monospace;
+  padding: 3px;
 }
 
 .code-block {
-    padding: 6px;
-    overflow: scroll;
+  padding: 6px;
+  overflow: scroll;
 }
 
 .code-snippet {

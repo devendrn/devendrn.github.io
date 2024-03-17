@@ -1,64 +1,64 @@
 @use 'mixin/all' as *;
 
 body {
-    @include col(bg-a,fg-a);
-    margin: 0;
-    font: {
-        family: "Open Sans", sans-serif;
-        size: 16px;
-        weight: 400;
-    }
+  @include col(bg-a,fg-a);
+  margin: 0;
+  font: {
+    family: "Open Sans", sans-serif;
+    size: 16px;
+    weight: 400;
+  }
 }
 
 h1 { 
-    font-size: 42px;
-    margin: 20px auto;
+  font-size: 42px;
+  margin: 20px auto;
 }
 h2 {
-    font-size: 30px;
-    margin: 16px auto;
+  font-size: 30px;
+  margin: 16px auto;
 }
 h3 {
-    font-size: 26px;
-    margin: 14px auto;
+  font-size: 26px;
+  margin: 14px auto;
 }
 h4 {
-    font-size: 18px;
-    margin: 12px auto;
+  font-size: 18px;
+  margin: 12px auto;
 }
 p, code {
-    font-size: 16px;
-    margin: 12px auto;
+  font-size: 16px;
+  margin: 12px auto;
 }
 
 h1, h2, h3, h4 {
-    font-weight: 500;
-    i {
-        padding-right: 16px;
-    }
+  font-weight: 500;
+  i {
+    padding-right: 16px;
+  }
 }
 
 p a {
   &:link {
-      @include col(null,link-normal);
-      text-decoration: none;
+    @include col(null,link-normal);
+    text-decoration: none;
   }
   &:visited {
-      @include col(null,link-visited);
-      text-decoration: none;
+    @include col(null,link-visited);
+    text-decoration: none;
   }
   &:hover {
-      @include col(null,link-visited);
-      text-decoration: underline;
+    @include col(null,link-visited);
+    text-decoration: underline;
   }
 }
 
 img {
-    @include col(img-bg,img-fg);
+  @include col(img-bg,img-fg);
 }
 
 iframe {
-    @include border(10px,0);
+  @include border(10px,0);
 }
 
 // text styles
@@ -66,115 +66,117 @@ iframe {
 .text-normal { font-weight: 400; }
 .text-bold { font-weight: 500; }
 .text-center { text-align: center; }
+.text-left { text-align: left; }
 
 // containers for elements
 .container {
-    position: relative;
+  position: relative;
 }
 
 .container-heading {
-    padding: 50px 0 20px;
+  padding: 50px 0 20px;
 }
 
 .container-section {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .container-s {
-    max-width: 400px;
+  max-width: 400px;
 }
 
 .container-m {
-    max-width: 640px;
+  max-width: 640px;
 }
 
 .container-l {
-    max-width: 800px;
+  max-width: 800px;
 }
 
 .container-spaced {
-    margin: 0 auto;
-    overflow: hidden;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .container-flex {
-    max-width: 1400px;
-    margin: 20px auto;
+  max-width: 1400px;
+  margin: 20px auto;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: center;
+  .container-m {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    .container-m {
-        display: flex;
-        flex-flow: column;
-        .card {
-            flex: 1 1 auto;
-        }
+    flex-flow: column;
+    .card {
+      flex: 1 1 auto;
     }
+  }
 }
 
 .container-fill {
-    @include col(bg-b,null);
-    .card {
-        @include col(bg-a,null);
-    }
+  @include col(bg-b,null);
+  .card {
+    @include col(bg-a,null);
+  }
 }
 
 .container-padded {
-    padding: 20px;
+  padding: 20px;
 }
 
 // navigation header
 .navbar {
-    @include col(bg-a,null);
-    box-shadow: 0 0 4px #0004;
-    position: fixed;
-    width: 100%;
-    z-index: 3;
-    a {
-        @include col(null,fg-a);
-        text-align: center;
-        padding: 10px;
-        text-decoration: none;
-        line-height: 20px;
-        transition: 200ms;
-    }
-    & a:hover {
-        @include col(null,fg-b);
-    }
+  @include col(bg-a,null);
+  box-shadow: 0 0 4px #0004;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  a {
+    @include col(null,fg-a);
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    line-height: 20px;
+    transition: 200ms;
+  }
+  & a:hover {
+    @include col(null,fg-b);
+  }
 }
 
 .navbar-home {  // logo text
-    float: left;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: -1px;
+  float: left;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -1px;
 }
 
 .navbar-element {
-    float: right;
-    font-size: 17px;
+  float: right;
+  font-size: 17px;
 }
 
 .navbar-active {
-    box-shadow: inset 0 -2px 0 0 #888;
+  box-shadow: inset 0 -2px 0 0 #888;
 }
 
 // copyright footer
 footer {
-    text-align: center;
-    padding: 8px 0;
-    box-shadow: 0 0 4px #0002;
-    p {
-        margin: 0 auto;
-    }
+  text-align: center;
+  padding: 8px 0;
+  box-shadow: 0 0 4px #0002;
+  p {
+    margin: 0 auto;
+  }
 }
 
 // name heading for front page
 .profile {
-    padding: 90px 30px 70px 30px;
+  padding: 90px 30px 70px 30px;
 }
 .profile-name, .profile-about {
-    margin: 10px auto;
+  margin: 10px auto;
 }
 
 // for spliting containers
@@ -185,20 +187,20 @@ footer {
 .col14 { width: 25%; }
 .col34 { width: 75%; }
 .col12, .col13, .col23,.col14,.col34 {
-    float: left;
+  float: left;
 }
 
 // mobile screen
 @media screen and (max-width: 560px) {
-    h1 { font-size: 36px; }
-    h2 { font-size: 29px; }
-    h3 { font-size: 22px; }
-    h4 { font-size: 18px; }
-    p { font-size: 15px; }
-    .col12, .col13, .col23, .about .col23 {
-        width: 100%;
-    }
-    .about .col13 { // no animated cogwheel
-        display: none;
-    }
+  h1 { font-size: 36px; }
+  h2 { font-size: 29px; }
+  h3 { font-size: 22px; }
+  h4 { font-size: 18px; }
+  p { font-size: 15px; }
+  .col12, .col13, .col23, .about .col23 {
+    width: 100%;
+  }
+  .about .col13 { // no animated cogwheel
+    display: none;
+  }
 }

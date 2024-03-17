@@ -3,12 +3,12 @@
 
 // core
 .card {
-    @include col(bg-b,null);
-    @include border(15px,0);
-    padding: 12px 20px;
-    margin: 10px;
-    overflow: hidden;
-    position: relative;
+  @include col(bg-b,null);
+  @include border(15px,0);
+  padding: 12px 20px;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
 }
 
 
@@ -17,173 +17,256 @@
 }
 
 .card-short {
-    height: 210px;
+  height: 210px;
 }
 
 // hover cards
 .card-img {
-    @include col(img-bg,img-fg);
-    @include border(15px,2);
-    text-align: center;
-    height: 220px;
-    padding: 0;
-    cursor: pointer;
-    transition: 200ms;
+  @include col(img-bg,img-fg);
+  @include border(15px,2);
+  text-align: center;
+  height: 220px;
+  padding: 0;
+  cursor: pointer;
+  transition: 200ms;
 
+  h3 {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    margin: 0;
+    left: 0;
+    top: 136px;
+    transition: 200ms;
+  }
+  p {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    opacity: 0;
+    margin: 0;
+    left: 0;
+    top: 170px;
+    transition: 200ms;
+  }
+  a {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+  }
+  span {
+    position: absolute;
+    z-index: 0;
+    width: calc(100% + 13px);
+    height: calc(100% + 13px);
+    margin: -10px;
+    background-image: linear-gradient(
+      180deg,
+      var(--img-grad-top),
+      var(--img-grad-bottom)
+    );
+  }
+  img {
+    object-fit: cover;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    margin: -5px;
+    transition: 200ms;
+  }
+
+  &:hover {
+    margin: 5px;
+    padding: 5px;
+    img {
+      width: calc(100% + 15px);
+      height: calc(100% + 15px);
+      margin: -7px -10px;
+    }
     h3 {
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        margin: 0;
-        left: 0;
-        top: 136px;
-        transition: 200ms;
+      top: 124px;
     }
     p {
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        opacity: 0;
-        margin: 0;
-        left: 0;
-        top: 170px;
-        transition: 200ms;
+      opacity: 0.7;
+      top: 164px;
     }
-    a {
-        position: absolute;
-        z-index: 2;
-        width: 100%;
-        height: 100%;
+  }
+  &:active {
+    margin: 10px;
+    padding: 0;
+    h3 {
+      top: 119px;
     }
-    span {
-        position: absolute;
-        z-index: 0;
-        width: calc(100% + 13px);
-        height: calc(100% + 13px);
-        margin: -10px;
-        background-image: linear-gradient(
-            180deg,
-            var(--img-grad-top),
-            var(--img-grad-bottom)
-        );
+    p {
+      top: 159px;
     }
-    img {
-        object-fit: cover;
-        width: calc(100% + 10px);
-        height: calc(100% + 10px);
-        margin: -5px;
-        transition: 200ms;
-    }
-
-    &:hover {
-        margin: 5px;
-        padding: 5px;
-        img {
-            width: calc(100% + 15px);
-            height: calc(100% + 15px);
-            margin: -7px -10px;
-        }
-        h3 {
-            top: 124px;
-        }
-        p {
-            opacity: 0.7;
-            top: 164px;
-        }
-    }
-    &:active {
-        margin: 10px;
-        padding: 0;
-        h3 {
-            top: 119px;
-        }
-        p {
-            top: 159px;
-        }
-    }
+  }
 }
 
 // for projects
 .card-list {
-    @include border(15px,3);
-    padding: 0;
-    margin: 20px;
-    display: flex;
-    height: 220px;
-    text-align: left;
+  @include border(15px,3);
+  padding: 0;
+  margin: 20px;
+  display: flex;
+  height: 220px;
+  text-align: left;
 }
 
 .card-list-img {
-    flex: 0 0 280px;
+  flex: 0 0 280px;
 
-    img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
 }
 .card-list-content {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 
-    h4 {
-        margin: 20px;
-    }
-    p {
-        margin: 0;
-        padding: 0 20px;
-        flex: 100%;
-    }
+  h4 {
+    margin: 20px;
+  }
+  p {
+    margin: 0;
+    padding: 0 20px;
+    flex: 100%;
+  }
 }
 .card-list-links {
-    @include col(bg-a,fg-a);
-    border-top: solid 2px var(--bg-b);
-    transition: 100ms;
-    font-size: 13px;
-    text-decoration: none;
-    padding: 15px 20px;
-    margin-top: 20px;
-    i {
-        padding-right: 10px;
-        font-size: 17px;
+  @include col(bg-a,fg-a);
+  border-top: solid 2px var(--bg-b);
+  transition: 100ms;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 15px 20px;
+  margin-top: 20px;
+  i {
+    padding-right: 10px;
+    font-size: 17px;
+  }
+  &:hover {
+    @include col(bg-b,null);
+  }
+}
+
+// TODO - Move this 
+.container-shadercard {
+  margin: 10px;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: center;
+  justify-content: center;
+}
+
+.shadercard {
+  @include border(15px,0);
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #282828d0 0%, #28282870 35%, #282828d0 100%);
+  color: #fefefe;
+  min-width: 290px;
+  max-width: 700px;
+  flex: 1;
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(5px);
+  }
+  a {
+    &:link { color: #88e; }
+    &:visited { color: #c8e; }
+    &:hover { color: #c8e; }
+  }
+  .shadercard-content {
+    flex: 1;
+    padding: 0 30px;
+    min-width: 220px;
+    text-shadow: 0 0 6px #282828;
+    h2 {
+      margin-top: 0;
     }
-    &:hover {
-        @include col(bg-b,null);
+  }
+  .shadercard-items .btn-wide {
+    color: #fff;
+    background: unset;
+    background-color: #80808080;
+  }
+  .shadercard-gallery {
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: calc(100% + 60px);
+    margin: -30px;
+    margin-bottom: 30px;
+    img {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      aspect-ratio: 2.4;
+      object-fit: cover;
+      display: inline;
     }
+  }
 }
 
 // smaller screen
 @media screen and (max-width: 560px) {
-    .card-img {
-        height: 200px;
-        padding: 0;
-        margin: 5px 10px;
+  .card-img {
+    height: 200px;
+    padding: 0;
+    margin: 5px 10px;
+  }
+  .card-img:active,.card-img:hover {
+    padding: 0;
+    margin: 5px 10px;
+  }
+  .card-img img,.card-img:hover img {
+    height: 100%;
+    width: 100%;
+    margin: 0px -5px;
+  }
+  .card-img p,.card-img:hover p {
+    top: 143px;
+    opacity: 0.7;
+  }
+  .card-img h3,.card-img:hover h3 {
+    top: 106px;
+  }
+  .card-list {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+  .card-list-img {
+    flex: 0 0 150px;
+  }
+  .shadercard {
+    padding: 30px 10px;
+    .shadercard-gallery {
+      margin: -10px;
+      margin-bottom: 10px;
+      width: calc(100% + 20px);
+      img {
+        aspect-ratio: 1.8;
+      }
     }
-    .card-img:active,.card-img:hover {
-        padding: 0;
-        margin: 5px 10px;
-    }
-    .card-img img,.card-img:hover img {
-        height: 100%;
-        width: 100%;
-        margin: 0px -5px;
-    }
-    .card-img p,.card-img:hover p {
-        top: 143px;
-        opacity: 0.7;
-    }
-    .card-img h3,.card-img:hover h3 {
-        top: 106px;
-    }
-    .card-list {
-        flex-direction: column;
-        height: auto;
-        text-align: center;
-    }
-    .card-list-img {
-        flex: 0 0 150px;
-    }
+  }
 }
-
 

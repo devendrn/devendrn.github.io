@@ -1,47 +1,47 @@
 // light color scheme vars
 :root {
-    --bg-a: #fff; // background main
-    --bg-b: #eee;
-    --bg-c: #ddd;
-    --fg-a: #222; // main,a
-    --fg-b: #333; // a hover
-    --fg-c: #444;
-    --btn-bg-a: #4c4;
-    --btn-bg-b: #46d;
-    --btn-bg-c: #d84;
-    --btn-bg-a-hover: #5d5;
-    --btn-bg-b-hover: #48e;
-    --btn-bg-c-hover: #e95;
-    --img-fg: #eee;
-    --img-bg: #777;
-    --img-grad-top: #0000;
-    --img-grad-bottom: #222f;
-    --border-shadow: 0 2px 8px #0002;
-    --link-normal: #229;
-    --link-visited: #729;
+  --bg-a: #fff; // background main
+  --bg-b: #eee;
+  --bg-c: #ddd;
+  --fg-a: #222; // main,a
+  --fg-b: #333; // a hover
+  --fg-c: #444;
+  --btn-bg-a: #4c4;
+  --btn-bg-b: #46d;
+  --btn-bg-c: #d84;
+  --btn-bg-a-hover: #5d5;
+  --btn-bg-b-hover: #48e;
+  --btn-bg-c-hover: #e95;
+  --img-fg: #eee;
+  --img-bg: #777;
+  --img-grad-top: #0000;
+  --img-grad-bottom: #222f;
+  --border-shadow: 0 2px 8px #0002;
+  --link-normal: #229;
+  --link-visited: #729;
 }
 
 // dark color scheme vars
 @media (prefers-color-scheme: dark) {
 :root {
-    --bg-a: #181818;
-    --bg-b: #282828;
-    --bg-c: #353535;
-    --fg-a: #fff;
-    --fg-b: #bbb;
-    --fg-c: #888;
-    --btn-bg-a: #4b4;
-    --btn-bg-b: #47b;
-    --btn-bg-c: #b84;
-    --btn-bg-a-hover: #5d5;
-    --btn-bg-b-hover: #58d;
-    --btn-bg-c-hover: #d95;
-    --img-fg: #eee;
-    --img-bg: #333;
-    --img-grad-top: #0003;
-    --img-grad-bottom: #111e;
-    --border-shadow: 0 3px 10px #0006;
-    --link-normal: #88e;
-    --link-visited: #c8e;
+  --bg-a: #181818;
+  --bg-b: #282828;
+  --bg-c: #353535;
+  --fg-a: #fff;
+  --fg-b: #bbb;
+  --fg-c: #888;
+  --btn-bg-a: #4b4;
+  --btn-bg-b: #47b;
+  --btn-bg-c: #b84;
+  --btn-bg-a-hover: #5d5;
+  --btn-bg-b-hover: #58d;
+  --btn-bg-c-hover: #d95;
+  --img-fg: #eee;
+  --img-bg: #333;
+  --img-grad-top: #0003;
+  --img-grad-bottom: #111e;
+  --border-shadow: 0 3px 10px #0006;
+  --link-normal: #88e;
+  --link-visited: #c8e;
 }
 }

@@ -1,92 +1,92 @@
 @use 'mixin/all' as *;
 
 .btn {
-    @include col(bg-a,fg-a);
-    @include border(10px,2);
-    display: inline-block;
-    text-align: center;
-    padding: 6px;
-    font-size: 18px;
-    text-decoration: none;
-    transition: 200ms;
+  @include col(bg-a,fg-a);
+  @include border(10px,2);
+  display: inline-block;
+  text-align: center;
+  padding: 6px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 200ms;
 }
 
 .btn-wide {
+  padding: 20px 10px;
+  width: 256px;
+  margin: 8px 3px;
+  font-weight: 600;
+  background-image: linear-gradient(45deg, #f006, #0f06);
+  background-blend-mode: lighten;
+  &:hover {
+    padding: 23px 13px;
+    margin: 5px 0;
+  }
+  &:active {
     padding: 20px 10px;
-    width: 256px;
     margin: 8px 3px;
-    font-weight: 600;
-    background-image: linear-gradient(45deg, #f006, #0f06);
-    background-blend-mode: lighten;
-    &:hover {
-        padding: 23px 13px;
-        margin: 5px 0;
-    }
-    &:active {
-        padding: 20px 10px;
-        margin: 8px 3px;
-    }
-    i {
-        padding-right: 10px;
-        text-shadow: 0 0 9px #fff0;
-    }
+  }
+  i {
+    padding-right: 10px;
+    text-shadow: 0 0 9px #fff0;
+  }
 }
 
 .btn-green {
-    @include col(btn-bg-a,bg-a);
-    &:hover {
-        @include col(btn-bg-a-hover,bg-a);
-    }
+  @include col(btn-bg-a,bg-a);
+  &:hover {
+    @include col(btn-bg-a-hover,bg-a);
+  }
 }
 .btn-blue {
-    @include col(btn-bg-b,bg-a);
-    &:hover {
-        @include col(btn-bg-b-hover,bg-a);
-    }
+  @include col(btn-bg-b,bg-a);
+  &:hover {
+    @include col(btn-bg-b-hover,bg-a);
+  }
 }
 .btn-orange {
-    @include col(btn-bg-c,bg-a);
-    &:hover {
-        @include col(btn-bg-c-hover,bg-a);
-    }
+  @include col(btn-bg-c,bg-a);
+  &:hover {
+    @include col(btn-bg-c-hover,bg-a);
+  }
 }
 
 // profile social links/buttons
 .social {
-    margin: 10px -5px;
-    position: absolute;
-    bottom: 15px;
+  margin: 10px -5px;
+  position: absolute;
+  bottom: 15px;
 }
 
 .btn-social {
+  padding: 6px 0;
+  margin: 4px;
+  width: 40px;
+  height: 25px;
+  span {
+    @include col(bg-a,fg-a);
+    @include border(10px,3);
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 100%;
+    margin-left: -53px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 230ms;
+    z-index: 1;
+  }
+  &:hover {
+    @include col(null,fg-b);
+    padding: 8px 0;
+    margin: 2px 4px;
+    span {
+      bottom: 117%;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &:active {
     padding: 6px 0;
     margin: 4px;
-    width: 40px;
-    height: 25px;
-    span {
-        @include col(bg-a,fg-a);
-        @include border(10px,3);
-        padding: 5px 10px;
-        position: absolute;
-        bottom: 100%;
-        margin-left: -53px;
-        visibility: hidden;
-        opacity: 0;
-        transition: 230ms;
-        z-index: 1;
-    }
-    &:hover {
-        @include col(null,fg-b);
-        padding: 8px 0;
-        margin: 2px 4px;
-        span {
-            bottom: 117%;
-            visibility: visible;
-            opacity: 1;
-        }
-    }
-    &:active {
-        padding: 6px 0;
-        margin: 4px;
-    }
+  }
 }

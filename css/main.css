@@ -122,6 +122,10 @@ iframe {
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .container {
   position: relative;
 }
@@ -155,6 +159,7 @@ iframe {
   max-width: 1400px;
   margin: 20px auto;
   display: flex;
+  align-items: stretch;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -529,6 +534,82 @@ footer p {
   background-color: var(--bg-b);
 }
 
+.container-shadercard {
+  margin: 10px;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: center;
+  justify-content: center;
+}
+
+.shadercard {
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(40, 40, 40, 0.8156862745) 0%, rgba(40, 40, 40, 0.4392156863) 35%, rgba(40, 40, 40, 0.8156862745) 100%);
+  color: #fefefe;
+  min-width: 290px;
+  max-width: 700px;
+  flex: 1;
+}
+.shadercard > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(5px);
+}
+.shadercard a:link {
+  color: #88e;
+}
+.shadercard a:visited {
+  color: #c8e;
+}
+.shadercard a:hover {
+  color: #c8e;
+}
+.shadercard .shadercard-content {
+  flex: 1;
+  padding: 0 30px;
+  min-width: 220px;
+  text-shadow: 0 0 6px #282828;
+}
+.shadercard .shadercard-content h2 {
+  margin-top: 0;
+}
+.shadercard .shadercard-items .btn-wide {
+  color: #fff;
+  background: unset;
+  background-color: rgba(128, 128, 128, 0.5019607843);
+}
+.shadercard .shadercard-gallery {
+  overflow-x: scroll;
+  white-space: nowrap;
+  width: calc(100% + 60px);
+  margin: -30px;
+  margin-bottom: 30px;
+}
+.shadercard .shadercard-gallery img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 2.4;
+  object-fit: cover;
+  display: inline;
+}
+
 @media screen and (max-width: 560px) {
   .card-img {
     height: 200px;
@@ -559,6 +640,17 @@ footer p {
   .card-list-img {
     flex: 0 0 150px;
   }
+  .shadercard {
+    padding: 30px 10px;
+  }
+  .shadercard .shadercard-gallery {
+    margin: -10px;
+    margin-bottom: 10px;
+    width: calc(100% + 20px);
+  }
+  .shadercard .shadercard-gallery img {
+    aspect-ratio: 1.8;
+  }
 }
 .spinner {
   content: "";
@@ -567,6 +659,10 @@ footer p {
   border: solid 4px #888;
   border-top-color: rgba(0, 0, 0, 0);
   border-radius: 50%;
+  margin-left: -18px;
+  position: fixed;
+  top: 50vh;
+  left: 50%;
 }
 
 .gallery-slide {
@@ -606,12 +702,6 @@ footer p {
 }
 .gallery a {
   opacity: 0;
-}
-.gallery .spinner {
-  margin-left: -18px;
-  position: fixed;
-  top: 50vh;
-  left: 50%;
 }
 .gallery::after {
   content: "";
@@ -706,12 +796,13 @@ footer p {
   animation: shimmer 6s infinite ease-in-out alternate-reverse;
 }
 
-.gallery .spinner {
+.spinner {
   animation: spin-anim;
   animation-duration: 0.8s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+
 .gallery a {
   animation: spin-fade-anim;
   animation-delay: 1.6s;
