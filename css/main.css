@@ -641,7 +641,7 @@ footer p {
     flex: 0 0 150px;
   }
   .shadercard {
-    padding: 30px 10px;
+    padding: 10px;
   }
   .shadercard .shadercard-gallery {
     margin: -10px;
@@ -650,6 +650,9 @@ footer p {
   }
   .shadercard .shadercard-gallery img {
     aspect-ratio: 1.8;
+  }
+  .shadercard .shadercard-content h2 {
+    margin-top: 15px;
   }
 }
 .spinner {
