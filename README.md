@@ -1,5 +1,4 @@
-Static website built from scratch using HTML, CSS and Javascript
+Static website built using Zola
 
+My Zola theme: **[devnzt](https://github.com/devendrn/devnzt)**
 Icons: **[Font Awesome 6.2.0](https://fontawesome.com)**
-
-Font: **[OpenSans](https://fonts.google.com/specimen/Open+Sans)**

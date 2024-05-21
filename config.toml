@@ -1,0 +1,23 @@
+base_url = "https://devendrn.github.io"
+compile_sass = true
+build_search_index = false
+
+title = "devendrn."
+description = "Devendran's portfolio."
+author = "devendrn"
+
+theme = "devnzt"
+
+[markdown]
+highlight_code = false
+
+[extra]
+error404_title = "Error 404"
+error404_description = "Can't find the page you were looking for..."
+
+header_links = [
+    { name = "Projects", url = "projects" },
+    { name = "Gallery", url = "gallery" },
+]
+
+footer_content = "Copyright &copy; devendrn"
