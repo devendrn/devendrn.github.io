@@ -1,4 +1,4 @@
-base_url = "https://devendrn.github.io"
+base_url = "https://devendrn.github.io/"
 compile_sass = true
 build_search_index = false
 
