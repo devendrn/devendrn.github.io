@@ -3,12 +3,11 @@ title = "devendrn"
 
 [extra]
 hero_title = "Devendran S.S"
-hero_caption = "Computer Artist and Programmer"
+hero_caption = "Computer Enthusiast"
 
 messagecard_socials = [
     { fa_icon = "fa-brands fa-github", alt="devendrn", url="https://github.com/devendrn" },
     { fa_icon = "fa-brands fa-discord", alt = "devendrn#0", url = "" },
-    { fa_icon = "fa-brands fa-linkedin-in", alt = "devendran-s-s", url = "" },
     { fa_icon = "fa-regular fa-envelope", alt = "devman2857@gmail.com", url = "" }
 ]
 +++
@@ -18,7 +17,7 @@ messagecard_socials = [
 {{ messagecard(
     title="Hi there!"
     description="
-I'm Devendran S.S, an engineering student and computer enthusiast. You can see some of my past works over here.
+I'm Devendran S.S, an engineering undergraduate and computer enthusiast. You can see some of my past works over here.
 Feel free to check them out.
 "
     socials_name="messagecard_socials"

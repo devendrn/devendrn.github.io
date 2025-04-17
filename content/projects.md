@@ -8,6 +8,14 @@ description = "A collection of my notable works."
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
 
 {{ infocard(
+    title = "3DRME"
+    description = "A 3D Raymarched Editor that features node-based scene editing capabilities, written in C++."
+    image = "https://i.ibb.co/4wBYSVJB/3drme.jpg"
+    link = "https://github.com/devendrn/3drme"
+    tags = ["C++", "3D Editor", "OpenGL", "Graphics"]
+)}}
+
+{{ infocard(
     title = "Broken Wheels"
     description = "A 2D manual transmission car simulator made with Godot, for mobile devices. (not physically based)"
     image = "https://i.ibb.co/zHzpcFq/broken-wheels.jpg"
