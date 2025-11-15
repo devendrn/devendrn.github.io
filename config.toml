@@ -1,12 +1,10 @@
-base_url = "https://devendrn.github.io/"
+base_url = "https://devendrn.com/"
 compile_sass = true
 build_search_index = false
 
 title = "devendrn."
 description = "Devendran's portfolio."
 author = "devendrn"
-
-theme = "devnzt"
 
 [markdown]
 highlight_code = false
